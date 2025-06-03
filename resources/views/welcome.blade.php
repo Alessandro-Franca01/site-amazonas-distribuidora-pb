@@ -2,6 +2,7 @@
 <html lang="pt-BR"><head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
     <title>Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -34,20 +35,43 @@
             opacity: 1;
             background: #fff;
         }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 30;
+            transition: all 0.3s ease;
+        }
+        .carousel-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        .carousel-arrow-left {
+            left: 20px;
+        }
+        .carousel-arrow-right {
+            right: 20px;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
 <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPySrK8O3Us6aoyqqWnxJG90qG3ljItV8eV6ENV2Hu_lm06rb5Jj-Fl-I2C564WdV1KhqvWSmhYEViyhtrGoHzL-oaO7r66tORsiiWfA4QAAYH0_RtNIx_Ct54kxNGWwhdPV7-Cl8WSOFLzc4YCuQzwalBd4ekTDwH7yev0NRCVH0HE6Axvbb8TDn5VroCofbRHkEKVpSXVgPAwkQY1Onz9S9OFZ0SogqBxhR7R748FBKo_JoGIyH_qIdP1CdYYtK7pZjcc91vj4"/>
+            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
             <span class="text-2xl font-bold text-green-700">Amazonas Distribuidora PB</span>
         </div>
         <nav class="hidden md:flex space-x-6">
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#produtos">Produtos</a>
-            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#servicos">Serviços</a>
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
         </nav>
         <button class="md:hidden text-green focus:outline-none">
@@ -60,25 +84,28 @@
         <div class="gradient-overlay absolute inset-0"></div>
         <div class="container mx-auto px-6 h-full flex items-center relative z-10">
             <!-- Carrossel -->
-            <div class="w-full max-w-5xl mx-auto">
-                <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl">
+            <div class="w-full mx-auto">
+                <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl h-[calc(100vh-200px)]">
                     <div class="carousel-slide">
-                        <img src="{{ asset('images/carrosel_01.jpg') }}" class="w-full hero-carousel-img h-96 object-cover" alt="Banner 1">
+                        <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 1">
                         <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
-                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">NOSSO HORÁRIO</h1>
-                            <p class="text-xl text-white mb-2">DE FUNCIONAMENTO</p>
-                            <div class="bg-white text-black rounded-lg py-3 px-6 inline-block shadow-lg mt-2">
-                                <p class="text-xl font-bold">SEGUNDA À SEXTA</p>
-                                <p class="text-3xl font-bold">8H - 17H</p>
-                            </div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
+
                         </div>
                     </div>
                     <div class="carousel-slide hidden">
-                        <img src="{{ asset('images/carrosel_02.png') }}" class="w-full hero-carousel-img h-96 object-cover" alt="Banner 2">
+                        <img src="{{ asset('images/materiais-atualizacao-fachadas.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 2">
                         <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
                             <p class="text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
                         </div>
+                    </div>
+                    <!-- Setas de navegação -->
+                    <div class="carousel-arrow carousel-arrow-left" id="prev-slide">
+                        <span class="material-icons text-white text-3xl">chevron_left</span>
+                    </div>
+                    <div class="carousel-arrow carousel-arrow-right" id="next-slide">
+                        <span class="material-icons text-white text-3xl">chevron_right</span>
                     </div>
                     <!-- Dots -->
                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex z-20">
@@ -89,6 +116,43 @@
             </div>
         </div>
     </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="py-16 bg-gray-100" id="destaques">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-green-700 mb-12">PRODUTOS EM DESTAQUE</h2>
+            
+            <!-- Linha única (full width) -->
+            <div class="grid grid-cols-1 mb-8">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 lg:h-96">
+                    <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                        <h3 class="text-2xl font-bold text-white">CHAPAS DE POLICARBONATO</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha dupla (apenas em desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                        <h3 class="text-2xl font-bold text-white">ACM</h3>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                    <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                        <h3 class="text-2xl font-bold text-white">ACRÍLICO</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Nossos Produtos -->
     <section class="py-16 bg-gray-100" id="produtos">
         <div class="container mx-auto px-6">
@@ -101,31 +165,31 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Lonas e Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTrF6RMiXcaHxI3j0CAPPxsqtdxnXv6llqHgNwxiDna_dfiA9cGPiJ4301NFOq9RS0JamwudJsbUktx73_jDJWQolsWIuO8h3N6TdAhG4LVvOhslX_VmCAuW05bI_MvT0ziJEF1quKKkBgceIyf9PaQMydU-U2tUpYe5dirC1KnFJyAKt9dyJ-Kp9B0ZdrnUZMud5ms99I8F0Dv_n6nHZHDeGkjw9awYs0Y-PdMJig9utUESY29iuHs2Ky4kuoM6l5CeBvipheXuU"/>
+                    <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Lonas e Adesivos</h3>
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
                         <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Placas e Fachadas" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAbR10rGKFjF03-P5jw2jzL2brWsB0PTr_f3xQ28Hx_qnVOcSNtFjGcig_5H-XgYig51FQVHZVlnzbwy_KhLSAqnLwCMJzdeEsR-7lBGpfxXeolEUlIJdaBzx5Rx4IVKarZFtqQbhlFWDQLu261FZrd2bOG4CxaFpU2AwEXJ2mmpHflXnVb_dUIDz1LoNt4mkcgQPTOqZ-fQeQAPxe5s1Z82Fw5WhArqQ7hXuRFCDcded_SIwvY5GaJz2sEsT0HehGkMbq3UHwGgY"/>
+                    <img alt="Placas e Fachadas" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Placas e Fachadas</h3>
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
                         <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Letras Caixa" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP51DgsKBo9Rkz3j-G-lpUAIpr7o6fHFEYngN06Zg6hocqu3t5ZOdXou26L-a3br8HliEii-YKRhm5ebLb7VWlgFZ6-rRjODDmQVrMLjD2sk7H5pOAiozqlKzrZVQyvzP8dbtGZC7A9qVGCElCjHbF1FXNgkuW-koJ7wAMTUcQnn90hAHuRFtfNxeHUKdLA5e2IskN18lE2irrh6mOndtV8xhTdUpm69A7h7yMAybjiwoE7pFhkl0bsRyFroSyq-H_TTo2XsK1wWs"/>
+                    <img alt="Letras Caixa" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Letras Caixa</h3>
-                        <p class="text-gray-600 text-sm">Design sofisticado e moderno para sinalização interna e externa.</p>
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
+                        <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Sinalização Viária" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALF5IzBvT1Jo7iAXSqbyKmSDmCFkGKhq4gOv2XcVqP3wRjqvYcL8z74J9inqtD6FzLvTpbocwVQQHob1R9sGxE_gvLf-5zw4pmU_pAmUr1s75IVzDlae0nXO_fKx7VYv5rhj9WgbC5qOKAxIuQ1tt254WSVeFD87VH3H49iM_7RciRptZuzFdSSieFcpLtCOVRunu4OOOnEq4X-kWmiOgJERoSf-3nd1yMxpWe-EQpmoDys1sMgZXd6paCN9QLgzGTw48hguDpMuU"/>
+                    <img alt="Sinalização Viária" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Sinalização Viária</h3>
-                        <p class="text-gray-600 text-sm">Produtos duráveis e de alta visibilidade para segurança no trânsito.</p>
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone</h3>
+                        <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade.</p>
                     </div>
                 </div>
             </div>
@@ -159,30 +223,6 @@
                     <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
                     <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
                     <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nossos Serviços -->
-    <section class="py-16 bg-white" id="servicos">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-black-700 mb-12">Nossos Serviços</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-black-500 mb-4">design_services</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-3">Criação e Design</h3>
-                    <p class="text-gray-600">Desenvolvemos layouts criativos e personalizados para sua comunicação visual.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-black-500 mb-4">print</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-3">Impressão Digital</h3>
-                    <p class="text-gray-600">Equipamentos modernos para impressões de alta resolução em diversos materiais.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-black-500 mb-4">construction</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-3">Instalação Especializada</h3>
-                    <p class="text-gray-600">Equipe qualificada para instalação segura e eficiente de seus projetos.</p>
                 </div>
             </div>
         </div>
@@ -222,7 +262,6 @@
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#inicio">Início</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/endereco">Sobre Nós</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#produtos">Produtos</a></li>
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#servicos">Serviços</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -260,17 +299,64 @@
             });
         });
     }
-    // Carrossel simples JS
+    // Carrossel com setas de navegação
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
+    const prevButton = document.getElementById('prev-slide');
+    const nextButton = document.getElementById('next-slide');
     let current = 0;
-    setInterval(() => {
-        slides[current].classList.add('hidden');
-        dots[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.remove('hidden');
-        dots[current].classList.add('active');
-    }, 4000);
+    let slideInterval;
+
+    // Função para mostrar o slide atual
+    function showSlide(index) {
+        // Esconde todos os slides
+        slides.forEach(slide => slide.classList.add('hidden'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Mostra o slide atual
+        slides[index].classList.remove('hidden');
+        dots[index].classList.add('active');
+        current = index;
+    }
+
+    // Função para ir para o próximo slide
+    function nextSlide() {
+        const next = (current + 1) % slides.length;
+        showSlide(next);
+    }
+
+    // Função para ir para o slide anterior
+    function prevSlide() {
+        const prev = (current - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+
+    // Adiciona eventos de clique aos botões
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+    }
+
+    // Função para reiniciar o intervalo automático
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+    }
+
+    // Função para iniciar o intervalo automático
+    function startInterval() {
+        slideInterval = setInterval(nextSlide, 4000);
+    }
+
+    // Inicia o carrossel
+    startInterval();
 </script>
 
 </body>

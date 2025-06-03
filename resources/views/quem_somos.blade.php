@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
     <title>Endereço - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -11,15 +12,14 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPySrK8O3Us6aoyqqWnxJG90qG3ljItV8eV6ENV2Hu_lm06rb5Jj-Fl-I2C564WdV1KhqvWSmhYEViyhtrGoHzL-oaO7r66tORsiiWfA4QAAYH0_RtNIx_Ct54kxNGWwhdPV7-Cl8WSOFLzc4YCuQzwalBd4ekTDwH7yev0NRCVH0HE6Axvbb8TDn5VroCofbRHkEKVpSXVgPAwkQY1Onz9S9OFZ0SogqBxhR7R748FBKo_JoGIyH_qIdP1CdYYtK7pZjcc91vj4"/>
+            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
                 <span class="text-2xl font-bold text-green-700">Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#produtos">Produtos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#servicos">Serviços</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
         </div>
     </header>
@@ -68,7 +68,7 @@
 
         <div class="container mx-auto px-6 text-center mt-16">
             <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
-            <h2 class="text-4xl font-bold mb-3">Nosso Horário</h2>
+            <h2 class="text-4xl text-green-700 font-bold mb-3">Nosso Horário</h2>
             <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
             <div class="bg-white text-green-800 rounded-lg py-6 px-4 inline-block shadow-2xl mt-6">
                 <p class="text-3xl font-bold">SEGUNDA À SEXTA</p>
