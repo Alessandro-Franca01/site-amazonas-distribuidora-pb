@@ -18,7 +18,21 @@
             background-position: center;
         }
         .gradient-overlay {
-            background: linear-gradient(to right, rgba(12, 105, 57, 0.85), rgba(12, 105, 57, 0.3));
+            background: linear-gradient(to right, rgba(12, 105, 57, 0.9), rgba(0, 0, 0, 0.6));
+        }
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0.5;
+            margin: 0 4px;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+        .carousel-dot.active {
+            opacity: 1;
+            background: #fff;
         }
     </style>
 </head>
@@ -31,61 +45,60 @@
         </div>
         <nav class="hidden md:flex space-x-6">
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
-            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#sobre">Sobre Nós</a>
+            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#produtos">Produtos</a>
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#servicos">Serviços</a>
-            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#contato">Contato</a>
+            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
         </nav>
-        <button class="md:hidden text-gray-700 focus:outline-none">
+        <button class="md:hidden text-green focus:outline-none">
             <span class="material-icons">menu</span>
         </button>
     </div>
 </header>
 <main>
-    <section class="hero-bg h-[calc(100vh-80px)] relative" id="inicio">
+    <section class="hero-bg h-[calc(100vh-100px)] relative flex items-center justify-center" id="inicio">
         <div class="gradient-overlay absolute inset-0"></div>
         <div class="container mx-auto px-6 h-full flex items-center relative z-10">
-            <div class="max-w-xl">
-                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                    Soluções Completas em <span class="text-yellow-400">Comunicação Visual</span>
-                </h1>
-                <p class="text-xl text-gray-200 mb-8">
-                    Qualidade e inovação para destacar sua marca. Da criação à instalação, estamos com você.
-                </p>
-                <a class="bg-yellow-400 text-green-800 font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg shadow-lg" href="#contato">
-                    Fale Conosco
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="py-16 bg-white" id="sobre">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
-            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
-                    <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
-                    <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
-                    <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
+            <!-- Carrossel -->
+            <div class="w-full max-w-5xl mx-auto">
+                <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl">
+                    <div class="carousel-slide">
+                        <img src="{{ asset('images/carrosel_01.jpg') }}" class="w-full hero-carousel-img h-96 object-cover" alt="Banner 1">
+                        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">NOSSO HORÁRIO</h1>
+                            <p class="text-xl text-white mb-2">DE FUNCIONAMENTO</p>
+                            <div class="bg-white text-black rounded-lg py-3 px-6 inline-block shadow-lg mt-2">
+                                <p class="text-xl font-bold">SEGUNDA À SEXTA</p>
+                                <p class="text-3xl font-bold">8H - 17H</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                        <img src="{{ asset('images/carrosel_02.png') }}" class="w-full hero-carousel-img h-96 object-cover" alt="Banner 2">
+                        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
+                            <p class="text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
+                        </div>
+                    </div>
+                    <!-- Dots -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex z-20">
+                        <span class="carousel-dot active"></span>
+                        <span class="carousel-dot"></span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Nossos Produtos -->
     <section class="py-16 bg-gray-100" id="produtos">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-green-700 mb-12">Nossos Produtos</h2>
+            <div class="mb-12 max-w-2xl mx-auto">
+                <div class="relative">
+                    <input class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none shadow-sm" id="search-product" placeholder="Buscar por produto ou categoria..." type="text"/>
+                    <span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                     <img alt="Lonas e Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTrF6RMiXcaHxI3j0CAPPxsqtdxnXv6llqHgNwxiDna_dfiA9cGPiJ4301NFOq9RS0JamwudJsbUktx73_jDJWQolsWIuO8h3N6TdAhG4LVvOhslX_VmCAuW05bI_MvT0ziJEF1quKKkBgceIyf9PaQMydU-U2tUpYe5dirC1KnFJyAKt9dyJ-Kp9B0ZdrnUZMud5ms99I8F0Dv_n6nHZHDeGkjw9awYs0Y-PdMJig9utUESY29iuHs2Ky4kuoM6l5CeBvipheXuU"/>
@@ -123,28 +136,59 @@
             </div>
         </div>
     </section>
+
+    <!-- Quem Somos -->
+    <section class="py-16 bg-white" id="sobre">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
+                    <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
+                    <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
+                    <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossos Serviços -->
     <section class="py-16 bg-white" id="servicos">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-green-700 mb-12">Nossos Serviços</h2>
+            <h2 class="text-4xl font-bold text-center text-black-700 mb-12">Nossos Serviços</h2>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-yellow-500 mb-4">design_services</span>
+                    <span class="material-icons text-6xl text-black-500 mb-4">design_services</span>
                     <h3 class="text-2xl font-semibold text-green-700 mb-3">Criação e Design</h3>
                     <p class="text-gray-600">Desenvolvemos layouts criativos e personalizados para sua comunicação visual.</p>
                 </div>
                 <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-yellow-500 mb-4">print</span>
+                    <span class="material-icons text-6xl text-black-500 mb-4">print</span>
                     <h3 class="text-2xl font-semibold text-green-700 mb-3">Impressão Digital</h3>
                     <p class="text-gray-600">Equipamentos modernos para impressões de alta resolução em diversos materiais.</p>
                 </div>
                 <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <span class="material-icons text-6xl text-yellow-500 mb-4">construction</span>
+                    <span class="material-icons text-6xl text-black-500 mb-4">construction</span>
                     <h3 class="text-2xl font-semibold text-green-700 mb-3">Instalação Especializada</h3>
                     <p class="text-gray-600">Equipe qualificada para instalação segura e eficiente de seus projetos.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Nosso Horário -->
     <section class="py-20 bg-green-700 text-white" id="horario">
         <div class="container mx-auto px-6 text-center">
             <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
@@ -176,7 +220,7 @@
                 <h4 class="text-xl font-semibold mb-4">Links Rápidos</h4>
                 <ul class="space-y-2">
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#inicio">Início</a></li>
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#sobre">Sobre Nós</a></li>
+                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/endereco">Sobre Nós</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#produtos">Produtos</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#servicos">Serviços</a></li>
                     <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#contato">Contato</a></li>
@@ -184,8 +228,8 @@
             </div>
             <div>
                 <h4 class="text-xl font-semibold mb-4">Localização</h4>
-                <p class="text-gray-300 mb-2">Rua Exemplo, 123 - Bairro Modelo</p>
-                <p class="text-gray-300 mb-2">João Pessoa - PB, CEP 58000-000</p>
+                <p class="text-gray-300 mb-2">Av Feliciano Dourado, 689 - Torre</p>
+                <p class="text-gray-300 mb-2">João Pessoa - PB, CEP 58040-260</p>
                 <p class="text-gray-300"><strong>Horário:</strong> Seg à Sex, 08h - 17h</p>
             </div>
         </div>
@@ -216,6 +260,17 @@
             });
         });
     }
+    // Carrossel simples JS
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.add('hidden');
+        dots[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove('hidden');
+        dots[current].classList.add('active');
+    }, 4000);
 </script>
 
 </body>
