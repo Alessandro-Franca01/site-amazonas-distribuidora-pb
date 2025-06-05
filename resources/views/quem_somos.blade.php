@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Endereço - Amazonas Distribuidora PB</title>
+    <title>Quem Somos - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <style>
@@ -18,6 +18,15 @@
         .breadcrumb span {
             color: #718096; /* gray-500 */
         }
+        .gradient-overlay-quem-somos {
+            background: linear-gradient(to right, rgba(186, 187, 186, 0.6), rgba(0, 0, 0, 0.1)); /* Opacidade do preto ajustada para 0.4 */
+        }
+        .gradient-overlay-endereco {
+            background: linear-gradient(to right, rgba(84, 85, 84, 0.6), rgba(0, 0, 0, 0.1)); /* Opacidade do preto ajustada para 0.4 */
+        }
+        .gradient-overlay-horario {
+            background: linear-gradient(to right, rgba(17, 70, 42, 0.31), rgba(0, 0, 0, 0.8)); /* Aumenta a opacidade do preto para 0.8 */
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -25,7 +34,7 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
             <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700">Amazonas Distribuidora PB</span>
+                <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
@@ -47,32 +56,36 @@
             </li>
         </ol>
     </nav>
-    <main class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
-            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
-                    <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
-                    <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
-                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
-                    <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
+    <main>
+        <!-- Quem Somos Section -->
+        <section id="quem-somos">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                    A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
+                        <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
+                        <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
+                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
+                        <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container mx-auto px-6" style="margin-top: 100px;">
+        <!-- Endereço Section -->
+        <div class="container mx-auto px-6 mb-8" style="margin-top: 100px;">
             <h1 class="text-4xl font-bold text-green-700 mb-6 text-center">Nosso Endereço</h1>
             <p class="text-xl text-center mb-8">Av Feliciano Dourado, 689 - Torre, João Pessoa - PB, CEP 58040-260</p>
             <div class="flex justify-center">
@@ -89,15 +102,20 @@
             </div>
         </div>
 
-        <div class="container mx-auto px-6 text-center mt-16">
-            <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
-            <h2 class="text-4xl text-green-700 font-bold mb-3">Nosso Horário</h2>
-            <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
-            <div class="bg-white text-green-800 rounded-lg py-6 px-4 inline-block shadow-2xl mt-6">
-                <p class="text-3xl font-bold">SEGUNDA À SEXTA</p>
-                <p class="text-5xl font-bold">8H - 17H</p>
+        <!-- Horário Section -->
+        <section class="py-20 bg-green-700 text-white relative" id="horario">
+            <div class="gradient-overlay gradient-overlay-horario absolute inset-0"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
+                <h2 class="text-4xl font-bold mb-3">Nosso Horário</h2>
+                <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
+                <div class="bg-white text-green-800 rounded-lg py-6 px-4 inline-block shadow-2xl mt-6">
+                    <p class="text-3xl font-bold">SEGUNDA À SEXTA</p>
+                    <p class="text-5xl font-bold">8H - 17H</p>
+                </div>
             </div>
-        </div>
+        </section>
+
     </main>
     <footer class="bg-green-800 text-white py-12">
         <div class="container mx-auto px-6">

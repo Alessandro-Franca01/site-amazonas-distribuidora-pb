@@ -132,8 +132,8 @@
         </section>
 
         <!-- Produtos em Destaque -->
-        <section class="py-16 bg-gray-100 relative" id="destaques">
-            <div class="gradient-overlay-produtos absolute inset-0"></div>
+        <section class="py-16 bg-gray-100" id="destaques">
+            
             <div class="container mx-auto px-6 relative z-10">
                 <h2 class="text-4xl font-bold text-center text-green-700 mb-12">PRODUTOS EM DESTAQUE</h2>
                 
@@ -168,7 +168,7 @@
             </div>
         </section>
 
-        <!-- Nossos Produtos -->
+        <!-- Quem Somos -->
         <section class="py-16 bg-white relative" id="produtos">
             <div class="gradient-overlay-quem-somos absolute inset-0"></div>
             <div class="container mx-auto px-6">
@@ -209,6 +209,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
+                            <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Placas e Fachadas" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
+                            <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Letras Caixa" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Sinalização Viária" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone</h3>
+                            <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="text-center mt-12">
                     <a class="bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md" href="#">
                         Ver Todos os Produtos
@@ -218,6 +248,7 @@
         </section>
 
         <!-- Quem Somos -->
+        <!--
         <section class="py-16 bg-white relative" id="sobre">
         <div class="gradient-overlay-quem-somos absolute inset-0"></div>
             <div class="container mx-auto px-6">
@@ -244,8 +275,10 @@
                 </div>
             </div>
         </section>
+        -->
 
         <!-- Nosso Horário -->
+    <!--
         <section class="py-20 bg-green-700 text-white relative" id="horario">
             <div class="gradient-overlay gradient-overlay-horario absolute inset-0"></div>
             <div class="container mx-auto px-6 text-center relative z-10">
@@ -258,6 +291,31 @@
                 </div>
             </div>
         </section>
+    -->
+        
+        <!-- Seção de Promoção Instagram e WhatsApp -->
+        <section class="py-16 bg-gray-100" id="promocao">
+            <div class="container mx-auto px-6 promo-section md:flex md:justify-around">
+                <div class="promo-item text-center mb-8 md:mb-0 md:w-1/2 px-4">
+                    <a href="https://www.instagram.com/amazonasdistribuidorapb/" target="_blank" class="block">
+                        <img src="{{ asset('images/instagram_banner.png') }}" 
+                            alt="Instagram Amazonas Distribuidora PB" 
+                            class="promo-img rounded-lg shadow-lg w-full h-80 object-cover hover:shadow-xl transition-shadow duration-300"/>
+                    </a>
+                    <h3 class="text-2xl font-bold text-green-700 mt-4">Siga-nos no Instagram!</h3>
+                    <p class="text-gray-600">Fique por dentro das novidades e promoções.</p>
+                </div>
+                <div class="promo-item text-center md:w-1/2 px-4">
+                    <a href="https://api.whatsapp.com/send?phone=83998530445" target="_blank" class="block">
+                        <img src="{{ asset('images/atendimento_whatssap.jpeg') }}"
+                            alt="WhatsApp Amazonas Distribuidora PB" 
+                            class="promo-img rounded-lg shadow-lg w-full h-80 object-cover hover:shadow-xl transition-shadow duration-300"/>
+                    </a>
+                    <h3 class="text-2xl font-bold text-green-700 mt-4">Fale Conosco pelo WhatsApp!</h3>
+                    <p class="text-gray-600">Atendimento rápido e personalizado.</p>
+                </div>
+            </div>
+    </section>
 
     </main>
     <footer class="bg-green-800 text-white py-12">

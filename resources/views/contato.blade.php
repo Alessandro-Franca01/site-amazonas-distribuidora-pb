@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Endereço - Amazonas Distribuidora PB</title>
+    <title>Contato - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <style>
@@ -25,7 +25,7 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
             <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700">Amazonas Distribuidora PB</span>
+                <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
