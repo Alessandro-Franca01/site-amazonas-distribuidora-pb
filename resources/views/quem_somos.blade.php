@@ -7,6 +7,18 @@
     <title>Endereço - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>
+        .breadcrumb a {
+            color: #4a5568; /* gray-700 */
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: #38a169; /* green-600 */
+        }
+        .breadcrumb span {
+            color: #718096; /* gray-500 */
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -23,7 +35,18 @@
             </nav>
         </div>
     </header>
-
+    <!-- Breadcrumb -->
+    <nav class="container mx-auto px-6 py-4 text-gray-700 text-sm breadcrumb">
+        <ol class="list-none p-0 inline-flex">
+            <li class="flex items-center">
+                <a href="/">Início</a>
+                <span class="material-icons text-base mx-2">chevron_right</span>
+            </li>
+            <li class="flex items-center">
+                <span>Quem Somos</span>
+            </li>
+        </ol>
+    </nav>
     <main class="py-16">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
