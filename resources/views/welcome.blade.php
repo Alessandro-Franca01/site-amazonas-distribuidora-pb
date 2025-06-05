@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Amazonas Distribuidora PB</title>
+    <title>AMZ - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -20,6 +20,9 @@
         }
         .gradient-overlay {
             background: linear-gradient(to right, rgba(12, 105, 57, 0.9), rgba(0, 0, 0, 0.6));
+        }
+        .gradient-overlay-horario {
+            background: linear-gradient(to right, rgba(12, 105, 57, 0.9), rgba(0, 0, 0, 0.8)); /* Aumenta a opacidade do preto para 0.8 */
         }
         .carousel-dot {
             width: 12px;
@@ -66,7 +69,7 @@
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center">
             <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-            <span class="text-2xl font-bold text-green-700">Amazonas Distribuidora PB</span>
+            <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
         </div>
         <nav class="hidden md:flex space-x-6">
             <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
@@ -229,8 +232,9 @@
     </section>
 
     <!-- Nosso Horário -->
-    <section class="py-20 bg-green-700 text-white" id="horario">
-        <div class="container mx-auto px-6 text-center">
+    <section class="py-20 bg-green-700 text-white relative" id="horario">
+        <div class="gradient-overlay gradient-overlay-horario absolute inset-0"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
             <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
             <h2 class="text-4xl font-bold mb-3">Nosso Horário</h2>
             <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
