@@ -84,7 +84,7 @@
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#produtos">Produtos</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none">
@@ -104,7 +104,6 @@
                             <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 1">
                             <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
                                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
-
                             </div>
                         </div>
                         <div class="carousel-slide hidden">
