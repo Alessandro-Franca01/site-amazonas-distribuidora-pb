@@ -14,6 +14,16 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .breadcrumb a {
+            color: #4a5568; /* gray-700 */
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: #38a169; /* green-600 */
+        }
+        .breadcrumb span {
+            color: #718096; /* gray-500 */
+        }
         .gradient-overlay-destaques {
             position: absolute;
             inset: 0;
@@ -94,10 +104,19 @@
         </div>
     </section>
 
-    <!-- Breadcrumbs -->
-    <div class="container mx-auto px-6 py-4 text-gray-600">
-        <a href="/" class="hover:underline">HOME</a> > <span class="font-semibold">PRODUTOS</span>
-    </div>
+
+    <!-- Breadcrumb -->
+    <nav class="container mx-auto px-6 py-4 text-gray-700 text-sm breadcrumb">
+        <ol class="list-none p-0 inline-flex">
+            <li class="flex items-center">
+                <a href="/">Início</a>
+                <span class="material-icons text-base mx-2">chevron_right</span>
+            </li>
+            <li class="flex items-center">
+                <span>Quem Somos</span>
+            </li>
+        </ol>
+    </nav>
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-6 py-8 flex flex-col md:flex-row">
@@ -186,6 +205,15 @@
                             <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
+                    <!-- Product Card for Álcool Isopropanol ST 900 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_ml.jpeg') }}" alt="Álcool Isopropanol ST 900" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Álcool Isopropanol ST 900</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônicos.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
                     <!-- Add more Outros products as needed -->
                 </div>
             </div>
@@ -231,15 +259,27 @@
 
     <script>
         // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Carousel functionality (if needed, adapt from welcome.blade.php)
-        // ... existing carousel JS ...
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
+        const mobileNav = document.querySelector('header nav');
+        if (mobileMenuButton && mobileNav) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                mobileNav.classList.toggle('absolute');
+                mobileNav.classList.toggle('top-16');
+                mobileNav.classList.toggle('left-0');
+                mobileNav.classList.toggle('right-0');
+                mobileNav.classList.toggle('bg-white');
+                mobileNav.classList.toggle('shadow-lg');
+                mobileNav.classList.toggle('p-6');
+                mobileNav.classList.toggle('space-y-4');
+                const links = mobileNav.querySelectorAll('a');
+                links.forEach(link => {
+                    link.classList.add('block');
+                    link.classList.remove('space-x-6');
+                });
+            });
+        }
     </script>
 </body>
 </html>

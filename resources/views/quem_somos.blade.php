@@ -39,11 +39,12 @@
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#produtos">Produtos</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
         </div>
     </header>
+
     <!-- Breadcrumb -->
     <nav class="container mx-auto px-6 py-4 text-gray-700 text-sm breadcrumb">
         <ol class="list-none p-0 inline-flex">

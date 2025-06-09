@@ -30,7 +30,7 @@
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#produtos">Produtos</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none">

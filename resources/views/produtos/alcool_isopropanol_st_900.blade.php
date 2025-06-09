@@ -64,41 +64,52 @@
 
     <main>
         <!-- Seção Principal do Produto -->
-        <section class="py-12 bg-white relative">
+        <section class="py-8 md:py-12 bg-white relative">
             <div class="gradient-overlay-produto absolute inset-0 opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col md:flex-row gap-12">
+            <div class="container mx-auto px-4 sm:px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-6 md:gap-12">
                     <!-- Imagem do Produto -->
-                    <div class="md:w-1/2">
-                        <div class="bg-white p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_ml.jpeg') }}" alt="Álcool Isopropanol ST 900" class="w-full h-auto rounded-lg">
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
+                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_ml.jpeg') }}" 
+                                alt="Álcool Isopropanol ST 900" 
+                                class="w-full h-auto max-h-[400px] object-contain rounded-lg">
                         </div>
-                        <div class="mt-6 grid grid-cols-3 gap-2">
-                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900.jpg') }}" alt="Álcool Isopropanol Imagem 01" class="w-full h-24 object-cover rounded-lg shadow cursor-pointer">
-                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_2.jpg') }}" alt="Álcool Isopropanol Imagem 02" class="w-full h-24 object-cover rounded-lg shadow cursor-pointer">
-                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_3.jpg') }}" alt="Álcool Isopropanol Imagem 03" class="w-full h-24 object-cover rounded-lg shadow cursor-pointer">
+                        <div class="mt-4 grid grid-cols-3 gap-2">
+                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900.jpg') }}" 
+                                alt="Álcool Isopropanol Imagem 01" 
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer">
+                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_2.jpg') }}" 
+                                alt="Álcool Isopropanol Imagem 02" 
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer">
+                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_3.jpg') }}" 
+                                alt="Álcool Isopropanol Imagem 03" 
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
-                    <div class="md:w-1/2">
-                        <h1 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">Álcool Isopropanol ST 900</h1>
-                        <div class="flex items-center mb-4">
-                            <span class="material-icons text-yellow-500">star</span>
-                            <span class="material-icons text-yellow-500">star</span>
-                            <span class="material-icons text-yellow-500">star</span>
-                            <span class="material-icons text-yellow-500">star</span>
-                            <span class="material-icons text-yellow-500">star_half</span>
-                            <span class="text-gray-600 ml-2">(4.5/5 - 28 avaliações)</span>
-                        </div>
-                        <div class="bg-gray-100 p-6 rounded-lg mb-6">
-                            <p class="text-lg text-gray-700 mb-4">O Álcool Isopropanol ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas. Ideal para uso profissional em comunicação visual, manutenção de equipamentos e limpeza industrial.</p>
-                            <p class="text-lg text-gray-700">Disponível em embalagens de 900ml, este produto oferece excelente poder de limpeza sem deixar resíduos.</p>
+                    <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Álcool Isopropanol ST 900</h1>
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="flex">
+                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
+                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
+                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
+                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
+                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star_half</span>
+                            </div>
+                            <span class="text-gray-600 ml-2 text-sm md:text-base">(4.5/5 - 28 avaliações)</span>
                         </div>
                         
-                        <div class="mb-6">
-                            <h2 class="text-xl font-semibold text-blue-700 mb-2">Características:</h2>
-                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O Álcool Isopropanol ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas.</p>
+                            <p class="text-base md:text-lg text-gray-700">Disponível em embalagens de 900ml, este produto oferece excelente poder de limpeza sem deixar resíduos.</p>
+                        </div>
+                        
+                        <div class="mb-4 md:mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
                                 <li>Alta pureza e rápida evaporação</li>
                                 <li>Não deixa resíduos após a aplicação</li>
                                 <li>Seguro para componentes eletrônicos</li>
@@ -107,11 +118,16 @@
                             </ul>
                         </div>
                         
-                        <div class="flex items-center space-x-4">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropanol ST 900" class="bg-green-600 text-white py-3 px-6 rounded-lg flex items-center hover:bg-green-700 transition duration-300">
-                                <span class="material-icons mr-2">shopping_cart</span> Solicitar Orçamento
+                        <div class="flex flex-col sm:flex-row items-center gap-3">
+                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropanol ST 900" 
+                            class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
+                                <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
+                                Solicitar Orçamento
                             </a>
-                            <a href="/contato" class="border border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-50 transition duration-300">Mais Informações</a>
+                            <a href="/contato" 
+                            class="w-full sm:w-auto border border-blue-600 text-blue-600 py-2 md:py-3 px-4 md:px-6 rounded-lg hover:bg-blue-50 transition duration-300 text-sm md:text-base text-center">
+                                Mais Informações
+                            </a>
                         </div>
                     </div>
                 </div>
