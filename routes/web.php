@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::view('/quem_somos', 'quem_somos');
 Route::view('/contato', 'contato');
-Route::view('/produtos/alcool-isopropanol-st-900', 'produtos.alcool_isopropanol_st_900');
+Route::view('/produtos/alcool-isopropanol-st-900', 'produtos.alcool_isopropilico_st_900_ml');
 Route::get('/produtos', function () {
     return view('produtos.produtos_categoria');
 });

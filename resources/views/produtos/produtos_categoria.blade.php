@@ -113,7 +113,7 @@
                 <span class="material-icons text-base mx-2">chevron_right</span>
             </li>
             <li class="flex items-center">
-                <span>Quem Somos</span>
+                <span>Produtos</span>
             </li>
         </ol>
     </nav>
@@ -207,7 +207,7 @@
                     </div>
                     <!-- Product Card for Álcool Isopropanol ST 900 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_ml.jpeg') }}" alt="Álcool Isopropanol ST 900" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" alt="Álcool Isopropanol ST 900" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Álcool Isopropanol ST 900</h3>
                             <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônicos.</p>

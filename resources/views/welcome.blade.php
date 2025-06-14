@@ -130,6 +130,36 @@
             </div>
         </section>
 
+        <!-- Hero Section for Products -->
+        <section class="bg-white py-20 text-center relative overflow-hidden" id="casos_de_uso">
+            <div class="gradient-overlay-produtos absolute inset-0"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato" 
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">CASO DE USO 1</h3>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM" 
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">CASO DE USO 2</h3>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
+                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico" 
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
+                            <h3 class="text-2xl font-bold text-white">CASO DE USO 3</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Produtos em Destaque -->
         <section class="py-16 bg-gray-100" id="destaques">
             
@@ -167,9 +197,9 @@
             </div>
         </section>
 
-        <!-- Quem Somos -->
+        <!-- Produtos -->
         <section class="py-16 bg-white relative" id="produtos">
-            <div class="gradient-overlay-quem-somos absolute inset-0"></div>
+   
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center text-green-700 mb-12">Nossos Produtos</h2>
                 <div class="mb-12 max-w-2xl mx-auto">
@@ -180,66 +210,95 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
-                            <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Placas e Fachadas" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
-                            <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Letras Caixa" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
-                            <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Sinalização Viária" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone</h3>
-                            <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
-                            <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Placas e Fachadas" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
-                            <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Letras Caixa" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
-                            <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Sinalização Viária" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
+                        <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
+                            <img alt="Álcool Isopropanol ST 900ml" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}"/>
+                        </a>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone</h3>
-                            <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Álcool Isopropanol ST 900ml</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônico.</p>
+                            <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">Veja mais</a>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="text-center mt-12">
-                    <a class="bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md" href="#">
+                    <a 
+                        class="bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md"
+                        href="{{ url('/produtos') }}">
                         Ver Todos os Produtos
                     </a>
                 </div>

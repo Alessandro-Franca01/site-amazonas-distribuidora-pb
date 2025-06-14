@@ -42,7 +42,7 @@
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#produtos">Produtos</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none">
@@ -57,7 +57,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Álcool Isopropanol ST 900</span>
+                <span class="breadcrumb-item text-gray-600">Álcool Isopropílico ST 900ml</span>
             </div>
         </div>
     </div>
@@ -71,8 +71,8 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/alcool_isopropanol_st_900_ml.jpeg') }}" 
-                                alt="Álcool Isopropanol ST 900" 
+                            <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" 
+                                alt="Álcool Isopropanol ST 900ml" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg">
                         </div>
                         <div class="mt-4 grid grid-cols-3 gap-2">
@@ -91,16 +91,6 @@
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
                         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Álcool Isopropanol ST 900</h1>
-                        <div class="flex items-center mb-3 md:mb-4">
-                            <div class="flex">
-                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
-                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
-                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
-                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star</span>
-                                <span class="material-icons text-yellow-500 text-lg md:text-xl">star_half</span>
-                            </div>
-                            <span class="text-gray-600 ml-2 text-sm md:text-base">(4.5/5 - 28 avaliações)</span>
-                        </div>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
                             <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O Álcool Isopropanol ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas.</p>
