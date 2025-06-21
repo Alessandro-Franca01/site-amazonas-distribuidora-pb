@@ -78,10 +78,95 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.open {
+            left: 0;
+        }
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .sidebar-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-nav {
+            padding: 1rem;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #333;
+            border-bottom: 1px solid #f5f5f5;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #2e7d32; /* Verde similar ao seu tema */
+            padding-left: 0.5rem;
+        }
+        
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
 <body>
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <button class="close-sidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#inicio">Início</a>
+            <a href="/quem_somos">Quem Somos</a>
+            <a href="/produtos">Produtos</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </div>
+
+    <!-- Seu header existente - modifique o botão de menu -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -89,12 +174,12 @@
                 <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
+            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
-            <button class="md:hidden text-green focus:outline-none">
+            <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
             </button>
         </div>
@@ -313,53 +398,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Quem Somos -->
-        <!--
-        <section class="py-16 bg-white relative" id="sobre">
-        <div class="gradient-overlay-quem-somos absolute inset-0"></div>
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
-                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                    A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
-                        <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
-                        <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
-                        <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-        <!-- Nosso Horário -->
-    <!--
-        <section class="py-20 bg-green-700 text-white relative" id="horario">
-            <div class="gradient-overlay gradient-overlay-horario absolute inset-0"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
-                <h2 class="text-4xl font-bold mb-3">Nosso Horário</h2>
-                <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
-                <div class="bg-white text-green-800 rounded-lg py-6 px-4 inline-block shadow-2xl mt-6">
-                    <p class="text-3xl font-bold">SEGUNDA À SEXTA</p>
-                    <p class="text-5xl font-bold">8H - 17H</p>
-                </div>
-            </div>
-        </section>
-    -->
-        
+  
         <!-- Seção de Promoção Instagram e WhatsApp -->
         <section class="py-16 bg-gray-100" id="promocao">
             <div class="container mx-auto px-6 promo-section md:flex md:justify-around">
@@ -383,7 +422,8 @@
                 </div>
             </div>
     </section>
-    <!-- Adicione este código antes do fechamento da tag </body> -->
+
+    <!-- Botão do whatssap -->
     <a href="https://api.whatsapp.com/send?phone=83998530445" 
         target="_blank"
         class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:shadow-xl animate-bounce"
@@ -430,27 +470,32 @@
         </div>
     </footer>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
-        const mobileNav = document.querySelector('header nav');
-        if (mobileMenuButton && mobileNav) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');
-                mobileNav.classList.toggle('absolute');
-                mobileNav.classList.toggle('top-16');
-                mobileNav.classList.toggle('left-0');
-                mobileNav.classList.toggle('right-0');
-                mobileNav.classList.toggle('bg-white');
-                mobileNav.classList.toggle('shadow-lg');
-                mobileNav.classList.toggle('p-6');
-                mobileNav.classList.toggle('space-y-4');
-                const links = mobileNav.querySelectorAll('a');
-                links.forEach(link => {
-                    link.classList.add('block');
-                    link.classList.remove('space-x-6');
-                });
+        // Side bar codes:
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const openBtn = document.querySelector('.open-sidebar');
+            const closeBtn = document.querySelector('.close-sidebar');
+            
+            openBtn.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        }
+            
+            closeBtn.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
         // Carrossel com setas de navegação
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.carousel-dot');
