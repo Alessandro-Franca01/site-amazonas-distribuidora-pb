@@ -99,18 +99,20 @@
             <div class="container mx-auto px-6 h-full flex items-center relative z-10">
                 <!-- Carrossel -->
                 <div class="w-full mx-auto">
-                    <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl h-[calc(100vh-200px)]">
+                    <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl h-96 lg:h-[calc(100vh-200px)]">
                         <div class="carousel-slide">
-                            <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 1">
+                            <img src="{{ asset('images/home/empresa-de-revestimento-de-acm.jpg') }}" class="w-full hero-carousel-img h-full object-cover lg:hidden" alt="Banner 1 Mobile">
+                            <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover hidden lg:block" alt="Banner 1 Desktop">
                             <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
-                                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
+                                <h1 class="text-2xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
                             </div>
                         </div>
                         <div class="carousel-slide hidden">
-                            <img src="{{ asset('images/materiais-atualizacao-fachadas.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 2">
+                            <img src="{{ asset('images/home/carrossel_mobile02.jpeg') }}" class="w-full hero-carousel-img h-full object-cover lg:hidden" alt="Banner 2 Mobile">
+                            <img src="{{ asset('images/materiais-atualizacao-fachadas.png') }}" class="w-full hero-carousel-img h-full object-cover hidden lg:block" alt="Banner 2 Desktop">
                             <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
-                                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
-                                <p class="text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
+                                <h1 class="text-2xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
+                                <p class="text-base md:text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
                             </div>
                         </div>
                         <!-- Setas de navegação -->
