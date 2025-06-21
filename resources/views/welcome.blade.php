@@ -71,10 +71,102 @@
         .carousel-arrow-right {
             right: 20px;
         }
+        .animate-bounce {
+            animation: bounce 2s ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.open {
+            left: 0;
+        }
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .sidebar-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-nav {
+            padding: 1rem;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #333;
+            border-bottom: 1px solid #f5f5f5;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #2e7d32; /* Verde similar ao seu tema */
+            padding-left: 0.5rem;
+        }
+        
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
 <body>
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <button class="close-sidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#inicio">Início</a>
+            <a href="/quem_somos">Quem Somos</a>
+            <a href="/produtos">Produtos</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </div>
+
+    <!-- Seu header existente - modifique o botão de menu -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -82,12 +174,12 @@
                 <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
+            <a class="text-gray-700 hover:text-green-600 transition duration-300" href="#inicio">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
-            <button class="md:hidden text-green focus:outline-none">
+            <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
             </button>
         </div>
@@ -99,18 +191,20 @@
             <div class="container mx-auto px-6 h-full flex items-center relative z-10">
                 <!-- Carrossel -->
                 <div class="w-full mx-auto">
-                    <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl h-[calc(100vh-200px)]">
+                    <div id="hero-carousel" class="relative overflow-hidden rounded-xl shadow-2xl h-96 lg:h-[calc(100vh-200px)]">
                         <div class="carousel-slide">
-                            <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 1">
+                            <img src="{{ asset('images/home/empresa-de-revestimento-de-acm.jpg') }}" class="w-full hero-carousel-img h-full object-cover lg:hidden" alt="Banner 1 Mobile">
+                            <img src="{{ asset('images/carrosel_teste.png') }}" class="w-full hero-carousel-img h-full object-cover hidden lg:block" alt="Banner 1 Desktop">
                             <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
-                                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
+                                <h1 class="text-2xl md:text-5xl font-bold text-white mb-4">VALORIZE SUA MARCA</h1>
                             </div>
                         </div>
                         <div class="carousel-slide hidden">
-                            <img src="{{ asset('images/materiais-atualizacao-fachadas.png') }}" class="w-full hero-carousel-img h-full object-cover" alt="Banner 2">
+                            <img src="{{ asset('images/home/carrossel_mobile02.jpeg') }}" class="w-full hero-carousel-img h-full object-cover lg:hidden" alt="Banner 2 Mobile">
+                            <img src="{{ asset('images/materiais-atualizacao-fachadas.png') }}" class="w-full hero-carousel-img h-full object-cover hidden lg:block" alt="Banner 2 Desktop">
                             <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40">
-                                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
-                                <p class="text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
+                                <h1 class="text-2xl md:text-5xl font-bold text-white mb-4">Soluções em Comunicação Visual</h1>
+                                <p class="text-base md:text-xl text-white mb-2">Qualidade e inovação para sua marca</p>
                             </div>
                         </div>
                         <!-- Setas de navegação -->
@@ -304,53 +398,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Quem Somos -->
-        <!--
-        <section class="py-16 bg-white relative" id="sobre">
-        <div class="gradient-overlay-quem-somos absolute inset-0"></div>
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-green-700 mb-4">Quem Somos</h2>
-                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                    A Amazonas Distribuidora PB é referência em comunicação visual na Paraíba, oferecendo produtos e serviços de alta qualidade para impulsionar o seu negócio.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">verified</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Qualidade Garantida</h3>
-                        <p class="text-gray-600">Utilizamos os melhores materiais e tecnologias para garantir resultados impecáveis.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">lightbulb</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Inovação Constante</h3>
-                        <p class="text-gray-600">Buscamos sempre as últimas tendências para oferecer soluções criativas e modernas.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-green-600 mb-4">groups</span>
-                        <h3 class="text-2xl font-semibold text-green-700 mb-2">Atendimento Personalizado</h3>
-                        <p class="text-gray-600">Nossa equipe está pronta para entender suas necessidades e oferecer o melhor.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-        <!-- Nosso Horário -->
-    <!--
-        <section class="py-20 bg-green-700 text-white relative" id="horario">
-            <div class="gradient-overlay gradient-overlay-horario absolute inset-0"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <img alt="Nosso Horário de Funcionamento: Segunda à Sexta, 8h - 17h" class="mx-auto mb-8 rounded-lg shadow-xl max-w-md w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq3a8egO3chpw-tL1GYwB7blxT_d-R7skMQxjdoV6ig9y_yMk6VUjL5DqX3m4QIA9Wx14__ButHudM3EoFetbsdmDXP6ZWG-mNx_rlj5euBIu7UNv8_a-Omp-vCJ7JNWzNpy13qpyLwQz5csQE4IvXy0SuPoBuy9YKXOYWw6GCYKNygBByJo41sXyGqFVg-dz2gANZumwplItSybz-arkS-svdLeSwV6ClbYYVlFTrFL2zgaGvJ4TdWpF9TbWLIshKhKCxEUfibM"/>
-                <h2 class="text-4xl font-bold mb-3">Nosso Horário</h2>
-                <p class="text-2xl font-light mb-1">DE FUNCIONAMENTO</p>
-                <div class="bg-white text-green-800 rounded-lg py-6 px-4 inline-block shadow-2xl mt-6">
-                    <p class="text-3xl font-bold">SEGUNDA À SEXTA</p>
-                    <p class="text-5xl font-bold">8H - 17H</p>
-                </div>
-            </div>
-        </section>
-    -->
-        
+  
         <!-- Seção de Promoção Instagram e WhatsApp -->
         <section class="py-16 bg-gray-100" id="promocao">
             <div class="container mx-auto px-6 promo-section md:flex md:justify-around">
@@ -375,6 +423,16 @@
             </div>
     </section>
 
+    <!-- Botão do whatssap -->
+    <a href="https://api.whatsapp.com/send?phone=83998530445" 
+        target="_blank"
+        class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:shadow-xl animate-bounce"
+        style="animation-iteration-count: 3;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="sr-only">WhatsApp</span>
+    </a>
     </main>
     <footer class="bg-green-800 text-white py-12">
         <div class="container mx-auto px-6">
@@ -412,27 +470,32 @@
         </div>
     </footer>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
-        const mobileNav = document.querySelector('header nav');
-        if (mobileMenuButton && mobileNav) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');
-                mobileNav.classList.toggle('absolute');
-                mobileNav.classList.toggle('top-16');
-                mobileNav.classList.toggle('left-0');
-                mobileNav.classList.toggle('right-0');
-                mobileNav.classList.toggle('bg-white');
-                mobileNav.classList.toggle('shadow-lg');
-                mobileNav.classList.toggle('p-6');
-                mobileNav.classList.toggle('space-y-4');
-                const links = mobileNav.querySelectorAll('a');
-                links.forEach(link => {
-                    link.classList.add('block');
-                    link.classList.remove('space-x-6');
-                });
+        // Side bar codes:
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const openBtn = document.querySelector('.open-sidebar');
+            const closeBtn = document.querySelector('.close-sidebar');
+            
+            openBtn.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        }
+            
+            closeBtn.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
         // Carrossel com setas de navegação
         const slides = document.querySelectorAll('.carousel-slide');
         const dots = document.querySelectorAll('.carousel-dot');
@@ -492,6 +555,5 @@
         // Inicia o carrossel
         startInterval();
     </script>
-
 </body>
 </html>
