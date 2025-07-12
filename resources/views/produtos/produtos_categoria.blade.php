@@ -73,9 +73,94 @@
             margin-bottom: 1rem;
             color: green;
         }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.open {
+            left: 0;
+        }
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .sidebar-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-nav {
+            padding: 1rem;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #333;
+            border-bottom: 1px solid #f5f5f5;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #2e7d32; /* Verde similar ao seu tema */
+            padding-left: 0.5rem;
+        }
+        
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
+    <!-- Side bar -->
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <button class="close-sidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/">Início</a>
+            <a href="/quem_somos">Quem Somos</a>
+            <a href="#produtos">Produtos</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -89,7 +174,7 @@
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
-            <button class="md:hidden text-green focus:outline-none">
+            <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
             </button>
         </div>
@@ -149,26 +234,43 @@
 
         <!-- Product Listing -->
         <section class="w-full md:w-3/4">
+
+            <div id="tintas" class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-bold mb-6">Chapas</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" alt="ACM - Aluminio Composto" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">ACM - Aluminio Composto</h3>
+                            <p class="text-gray-600 text-sm">Prepara superfícies para melhor aderência da tinta.</p>
+                            <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Add more Tintas products as needed -->
+                </div>
+            </div>
+
             <!-- Fitas e Adesivos Section -->
             <div id="fitas-e-adesivos" class="bg-white p-6 rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold mb-6">Fitas e Adesivos</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/adesivos.png') }}" alt="Fitas e Adesivos" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}" alt="Fitas e Adesivos" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Fita Adesiva Transparente</h3>
-                            <p class="text-gray-600 text-sm">Ideal para embalagens e uso geral.</p>
-                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <h3 class="font-semibold text-lg mb-2">Fita Dupla Face - Alta Performace </h3>
+                            <p class="text-gray-600 text-sm">A fita dupla face de alta performance é uma ótima opção para quem busca praticidade e eficiência na hora de fixar objeto.</p>
+                            <a href="{{ url('/produtos/fita_dupla_face_alta_performance') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Product Card 2 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/silicone_neutro.png') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Silicone Neutro</h3>
-                            <p class="text-gray-600 text-sm">Para vedação e selagem em diversas superfícies.</p>
-                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <h3 class="font-semibold text-lg mb-2">Fita Forte Adere - Dupla Face</h3>
+                            <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
+                            <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Add more Fitas e Adesivos products as needed -->
@@ -258,28 +360,31 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
-        const mobileNav = document.querySelector('header nav');
-        if (mobileMenuButton && mobileNav) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');
-                mobileNav.classList.toggle('absolute');
-                mobileNav.classList.toggle('top-16');
-                mobileNav.classList.toggle('left-0');
-                mobileNav.classList.toggle('right-0');
-                mobileNav.classList.toggle('bg-white');
-                mobileNav.classList.toggle('shadow-lg');
-                mobileNav.classList.toggle('p-6');
-                mobileNav.classList.toggle('space-y-4');
-                const links = mobileNav.querySelectorAll('a');
-                links.forEach(link => {
-                    link.classList.add('block');
-                    link.classList.remove('space-x-6');
-                });
+        // Side bar codes:
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const openBtn = document.querySelector('.open-sidebar');
+            const closeBtn = document.querySelector('.close-sidebar');
+            
+            openBtn.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        }
+            
+            closeBtn.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Álcool Isopropílico ST 900 - Amazonas Distribuidora PB</title>
+    <title> ACM - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -30,9 +30,95 @@
             padding: 0 0.5rem;
             color: #6b7280;
         }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.open {
+            left: 0;
+        }
+        
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .sidebar-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sidebar-nav {
+            padding: 1rem;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 0.75rem 0;
+            color: #333;
+            border-bottom: 1px solid #f5f5f5;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .sidebar-nav a:hover {
+            color: #2e7d32; /* Verde similar ao seu tema */
+            padding-left: 0.5rem;
+        }
+        
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
+    <!-- Side bar -->
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <button class="close-sidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/">Início</a>
+            <a href="/quem_somos">Quem Somos</a>
+            <a href="#produtos">Produtos</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -45,7 +131,7 @@
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
-            <button class="md:hidden text-green focus:outline-none">
+            <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
             </button>
         </div>
@@ -57,7 +143,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Álcool Isopropílico ST 900ml</span>
+                <span class="breadcrumb-item text-gray-600">ACM</span>
             </div>
         </div>
     </div>
@@ -71,29 +157,43 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" 
-                                alt="Álcool Isopropanol ST 900ml" 
+                            <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" 
+                                alt="ACM - Chapa de aluminio composto" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
+                        </div>
+                        <div class="mt-4 grid grid-cols-3 gap-2">
+                            <img src="{{ asset('images/produtos/acms/acm_02.jpeg') }}" 
+                                alt="ACM IMG 02" 
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
+                            <img src="{{ asset('images/produtos/acms/acm_03.jpeg') }}" 
+                                alt="ACM IMG 03"
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
+                            <img src="{{ asset('images/produtos/acms/acm_04.jpeg') }}" 
+                                alt="ACM IMG 04"
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
+                            <img src="{{ asset('images/produtos/acms/acm_05.jpeg') }}" 
+                                alt="ACM IMG 05" 
+                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Álcool Isopropílico ST 900</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">ACM - Chapa de aluminio composto</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O Álcool Isopropílico ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas.</p>
-                            <p class="text-base md:text-lg text-gray-700">Disponível em embalagens de 900ml, este produto oferece excelente poder de limpeza sem deixar resíduos.</p>
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas. É composto por duas lâminas de alumínio com um núcleo de polietileno, oferecendo leveza e resistência. As chapas de ACM podem ser encontradas em diversas espessuras (3mm a 6mm) e tamanhos, com largura padrão de 1.220mm e 1.500mm, e comprimento de até 6000mm.</p>
                         </div>
                         
                         <div class="mb-4 md:mb-6">
                             <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
                             <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
-                                <li>Alta pureza e rápida evaporação</li>
-                                <li>Não deixa resíduos após a aplicação</li>
-                                <li>Seguro para componentes eletrônicos</li>
-                                <li>Embalagem de 900ml</li>
-                                <li>Fabricante: Universal Química</li>
+                                <li><strong> Composição </strong> Duas lâminas de alumínio com núcleo de polietileno</li>
+                                <li><strong> Leveza e Resistência </strong> Combinação de alumínio e polietileno garante um material leve, mas com boa resistência mecânica.</li>
+                                <li><strong> Versatilidade </strong> Pode ser aplicado em ambientes internos e externos, para diferentes tipos de projetos.</li>
+                                <li><strong> Acabamentos </strong> Oferece diversas opções de cores e acabamentos, incluindo brilho e fosco.</li>
+                                <li><strong> Dimensões </strong> Larguras padrão de 1250mm e 1500mm, e comprimentos de até 6000mm.</li>
+                                <li><strong> Espessuras </strong> Geralmente, varia entre 3mm e 6mm.</li>
                             </ul>
                         </div>
                         
@@ -126,23 +226,23 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico ST 900</td>
+                                        <td class="py-3 text-gray-800">ACM - Chapa de aluminio composto</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800">Universal Química</td>
+                                        <td class="py-3 text-gray-800">?????</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Volume</td>
-                                        <td class="py-3 text-gray-800">900ml</td>
+                                        <td class="py-3 text-gray-600 font-medium">Dimensões</td>
+                                        <td class="py-3 text-gray-800">1250mmx1500mm e 6000mm comprimento</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Tipo</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico</td>
+                                        <td class="py-3 text-gray-800">Chapa</td>
                                     </tr>
                                     <tr>
                                         <td class="py-3 text-gray-600 font-medium">Aplicação</td>
-                                        <td class="py-3 text-gray-800">Limpeza de componentes eletrônicos e superfícies</td>
+                                        <td class="py-3 text-gray-800">Fachadas, Revestimentos, Painéis e etc</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -153,24 +253,20 @@
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Aparência</td>
-                                        <td class="py-3 text-gray-800">Líquido incolor</td>
+                                        <td class="py-3 text-gray-600 font-medium">Material</td>
+                                        <td class="py-3 text-gray-800">Alumínio</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Odor</td>
-                                        <td class="py-3 text-gray-800">Característico</td>
+                                        <td class="py-3 text-gray-600 font-medium">Cores</td>
+                                        <td class="py-3 text-gray-800">Diversas, incluindo brilho e fosco</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Ponto de Ebulição</td>
-                                        <td class="py-3 text-gray-800">82,5°C</td>
+                                        <td class="py-3 text-gray-600 font-medium">Espessura</td>
+                                        <td class="py-3 text-gray-800">De 3mm até 6mm</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Solubilidade em Água</td>
-                                        <td class="py-3 text-gray-800">Completa</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Densidade</td>
-                                        <td class="py-3 text-gray-800">0,785 g/cm³</td>
+                                        <td class="py-3 text-gray-600 font-medium">Peso</td>
+                                        <td class="py-3 text-gray-800">????</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -185,6 +281,39 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Aplicações</h2>
                 
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">architecture</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Fachadas</h3>
+                        <p class="text-gray-600">Revestimento de fachadas de edifícios comerciais e residenciais.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">brush</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Revestimentos internos</h3>
+                        <p class="text-gray-600">Decoração de paredes e divisórias internas.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">campaign</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Painéis e letreiros</h3>
+                        <p class="text-gray-600">Criação de painéis publicitários e letreiros luminosos.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">palette</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Peças decorativas</h3>
+                        <p class="text-gray-600">Elementos decorativos em projetos arquitetônicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vantagens -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Vantagens</h2>
+                
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">devices</span>
@@ -193,13 +322,13 @@
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">print</span>
+                        <span class="material-icons text-5xl text-blue-600 mb-4">format_paint</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Comunicação Visual</h3>
                         <p class="text-gray-600">Perfeito para limpeza de superfícies antes da aplicação de adesivos, vinil e outros materiais gráficos.</p>
                     </div>
                     
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">cleaning_services</span>
+                        <span class="material-icons text-5xl text-blue-600 mb-4">factory</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza Industrial</h3>
                         <p class="text-gray-600">Utilizado na limpeza de precisão em ambientes industriais, removendo óleos e graxas sem deixar resíduos.</p>
                     </div>
@@ -290,28 +419,32 @@
     </footer>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
-        const mobileNav = document.querySelector('header nav');
-        if (mobileMenuButton && mobileNav) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileNav.classList.toggle('hidden');
-                mobileNav.classList.toggle('absolute');
-                mobileNav.classList.toggle('top-16');
-                mobileNav.classList.toggle('left-0');
-                mobileNav.classList.toggle('right-0');
-                mobileNav.classList.toggle('bg-white');
-                mobileNav.classList.toggle('shadow-lg');
-                mobileNav.classList.toggle('p-6');
-                mobileNav.classList.toggle('space-y-4');
-                const links = mobileNav.querySelectorAll('a');
-                links.forEach(link => {
-                    link.classList.add('block');
-                    link.classList.remove('space-x-6');
-                });
+        // Side bar codes:
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const openBtn = document.querySelector('.open-sidebar');
+            const closeBtn = document.querySelector('.close-sidebar');
+            
+            openBtn.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        }
+            
+            closeBtn.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
         
-        // Galeria de imagens do produto
         // Galeria de imagens do produto
         const mainImage = document.getElementById('mainProductImage');
         const thumbnails = document.querySelectorAll('.thumbnail-image');
