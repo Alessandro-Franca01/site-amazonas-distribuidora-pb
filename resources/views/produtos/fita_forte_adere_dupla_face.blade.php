@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Álcool Isopropílico ST 900 - Amazonas Distribuidora PB</title>
+    <title>Fita Forte Adere - Dupla Face | Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -57,7 +57,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Álcool Isopropílico ST 900ml</span>
+                <span class="breadcrumb-item text-gray-600">Fita Forte Adere - Dupla Face</span>
             </div>
         </div>
     </div>
@@ -71,32 +71,20 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" 
-                                alt="Álcool Isopropanol ST 900ml" 
+                            <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" 
+                                alt="Fita Forte Adere - Dupla Face" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Álcool Isopropílico ST 900</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Fita Forte Adere - Dupla Face</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O Álcool Isopropílico ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas.</p>
-                            <p class="text-base md:text-lg text-gray-700">Disponível em embalagens de 900ml, este produto oferece excelente poder de limpeza sem deixar resíduos.</p>
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos. Com seu adesivo de alta resistência, oferece uma fixação permanente que garante uma aderência firme e duradoura em diversas superfícies, como madeira, metal, plástico e vidro. Graças ao seu design de dupla face, permite fixar objetos de forma rápida e eficiente, sem a necessidade de ferramentas adicionais. Sua extensão de 20 metros a torna uma opção versátil para projetos pequenos e grandes. Perfeita para artesanato, decorações, montagem de sinalizações ou qualquer tarefa que exija uma fixação confiável. Com a Fita Forte, otimize seu tempo e obtenha um acabamento profissional.</p>
                         </div>
-                        
-                        <div class="mb-4 md:mb-6">
-                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
-                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
-                                <li>Alta pureza e rápida evaporação</li>
-                                <li>Não deixa resíduos após a aplicação</li>
-                                <li>Seguro para componentes eletrônicos</li>
-                                <li>Embalagem de 900ml</li>
-                                <li>Fabricante: Universal Química</li>
-                            </ul>
-                        </div>
-                        
+                    
                         <div class="flex flex-col sm:flex-row items-center gap-3">
                             <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
                             class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
@@ -126,82 +114,63 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico ST 900</td>
+                                        <td class="py-3 text-gray-800">Fita Forte Adere - Dupla Face</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800">Universal Química</td>
+                                        <td class="py-3 text-gray-800"> Bomber </td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Volume</td>
-                                        <td class="py-3 text-gray-800">900ml</td>
+                                        <td class="py-3 text-gray-600 font-medium">Cor</td>
+                                        <td class="py-3 text-gray-800">Verde</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Tipo</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico</td>
+                                        <td class="py-3 text-gray-600 font-medium">Nome do desenho</td>
+                                        <td class="py-3 text-gray-800"> Liso </td>
                                     </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Aplicação</td>
-                                        <td class="py-3 text-gray-800">Limpeza de componentes eletrônicos e superfícies</td>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 text-gray-600 font-medium">Comprimento x Largura</td>
+                                        <td class="py-3 text-gray-800">20 m x 12 cm</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 text-gray-600 font-medium">Formato de venda</td>
+                                        <td class="py-3 text-gray-800"> Unidade </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-4">Propriedades Físico-Químicas</h3>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-4">Outros</h3>
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Aparência</td>
-                                        <td class="py-3 text-gray-800">Líquido incolor</td>
+                                        <td class="py-3 text-gray-600 font-medium">Tipo de Fita Adesiva</td>
+                                        <td class="py-3 text-gray-800">Dupla face</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Odor</td>
-                                        <td class="py-3 text-gray-800">Característico</td>
+                                        <td class="py-3 text-gray-600 font-medium">Superficieis Recomendadas</td>
+                                        <td class="py-3 text-gray-800">Plástico, Metal, Acrilico, Madeira</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Ponto de Ebulição</td>
-                                        <td class="py-3 text-gray-800">82,5°C</td>
+                                        <td class="py-3 text-gray-600 font-medium">Espessura</td>
+                                        <td class="py-3 text-gray-800">12 mm</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Solubilidade em Água</td>
-                                        <td class="py-3 text-gray-800">Completa</td>
+                                        <td class="py-3 text-gray-600 font-medium">Material</td>
+                                        <td class="py-3 text-gray-800">Massa acrilica</td>
                                     </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Densidade</td>
-                                        <td class="py-3 text-gray-800">0,785 g/cm³</td>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 text-gray-600 font-medium">Acabamento</td>
+                                        <td class="py-3 text-gray-800">Transparente</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 text-gray-600 font-medium">Temperatura</td>
+                                        <td class="py-3 text-gray-800">120 °C</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Aplicações -->
-        <section class="py-12 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Aplicações</h2>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">devices</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza de Eletrônicos</h3>
-                        <p class="text-gray-600">Ideal para limpeza de placas de circuito, componentes eletrônicos e equipamentos de precisão.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">print</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Comunicação Visual</h3>
-                        <p class="text-gray-600">Perfeito para limpeza de superfícies antes da aplicação de adesivos, vinil e outros materiais gráficos.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">cleaning_services</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza Industrial</h3>
-                        <p class="text-gray-600">Utilizado na limpeza de precisão em ambientes industriais, removendo óleos e graxas sem deixar resíduos.</p>
                     </div>
                 </div>
             </div>

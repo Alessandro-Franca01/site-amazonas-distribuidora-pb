@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Álcool Isopropílico ST 900 - Amazonas Distribuidora PB</title>
+    <title>Fita Dupla Face - Alta Performace | Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -57,7 +57,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Álcool Isopropílico ST 900ml</span>
+                <span class="breadcrumb-item text-gray-600">Fita Dupla Face - Alta Performace</span>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" 
+                            <img src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}" 
                                 alt="Álcool Isopropanol ST 900ml" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
@@ -79,21 +79,21 @@
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Álcool Isopropílico ST 900</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Fita Dupla Face - Alta Performace</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
                             <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O Álcool Isopropílico ST 900 da Universal Química é um produto de alta qualidade para limpeza de componentes eletrônicos e superfícies delicadas.</p>
-                            <p class="text-base md:text-lg text-gray-700">Disponível em embalagens de 900ml, este produto oferece excelente poder de limpeza sem deixar resíduos.</p>
+                            <p class="text-base md:text-lg text-gray-700">A fita dupla face de alta performance da Amazonas, como outras fitas similares de outras marcas como 3M, é um tipo de fita adesiva que possui adesivo em ambos os lados, permitindo a fixação de objetos sem a necessidade de pregos ou parafusos. Essas fitas são frequentemente usadas para fixar objetos decorativos, painéis, quadros e outros itens em ambientes internos e externos.</p>
                         </div>
                         
                         <div class="mb-4 md:mb-6">
                             <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
                             <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
-                                <li>Alta pureza e rápida evaporação</li>
-                                <li>Não deixa resíduos após a aplicação</li>
-                                <li>Seguro para componentes eletrônicos</li>
-                                <li>Embalagem de 900ml</li>
-                                <li>Fabricante: Universal Química</li>
+                                <li>Adesão forte</li>
+                                <li>Versatilidade</li>
+                                <li>Praticidade</li>
+                                <li>Resistência</li>
+                                <li>Aplicações diversas</li>
                             </ul>
                         </div>
                         
@@ -126,23 +126,11 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico ST 900</td>
+                                        <td class="py-3 text-gray-800">Fita Dupla Face - Alta Performace</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800">Universal Química</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Volume</td>
-                                        <td class="py-3 text-gray-800">900ml</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Tipo</td>
-                                        <td class="py-3 text-gray-800">Álcool Isopropílico</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Aplicação</td>
-                                        <td class="py-3 text-gray-800">Limpeza de componentes eletrônicos e superfícies</td>
+                                        <td class="py-3 text-gray-800"> ???? </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -153,24 +141,12 @@
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Aparência</td>
-                                        <td class="py-3 text-gray-800">Líquido incolor</td>
+                                        <td class="py-3 text-gray-600 font-medium">Adesão </td>
+                                        <td class="py-3 text-gray-800">Forte</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Odor</td>
-                                        <td class="py-3 text-gray-800">Característico</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Ponto de Ebulição</td>
-                                        <td class="py-3 text-gray-800">82,5°C</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Solubilidade em Água</td>
-                                        <td class="py-3 text-gray-800">Completa</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Densidade</td>
-                                        <td class="py-3 text-gray-800">0,785 g/cm³</td>
+                                        <td class="py-3 text-gray-600 font-medium">Resistência</td>
+                                        <td class="py-3 text-gray-800">Suporta até 5 kg</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -183,25 +159,25 @@
         <!-- Aplicações -->
         <section class="py-12 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Aplicações</h2>
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Dicas de Aplicações</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">devices</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza de Eletrônicos</h3>
-                        <p class="text-gray-600">Ideal para limpeza de placas de circuito, componentes eletrônicos e equipamentos de precisão.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <span class="material-icons text-5xl text-blue-600 mb-4">print</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Comunicação Visual</h3>
-                        <p class="text-gray-600">Perfeito para limpeza de superfícies antes da aplicação de adesivos, vinil e outros materiais gráficos.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">cleaning_services</span>
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza Industrial</h3>
-                        <p class="text-gray-600">Utilizado na limpeza de precisão em ambientes industriais, removendo óleos e graxas sem deixar resíduos.</p>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Dica N°1</h3>
+                        <p class="text-gray-600">Limpe a superfície onde a fita será aplicada para garantir uma boa aderência.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">content_cut</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Dica N°2</h3>
+                        <p class="text-gray-600">Corte o tamanho desejado da fita e pressione firmemente sobre a superfície.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <span class="material-icons text-5xl text-blue-600 mb-4">touch_app</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Dica N°3</h3>
+                        <p class="text-gray-600">Aplique o objeto sobre a fita e pressione novamente para garantir a fixação.</p>
                     </div>
                 </div>
             </div>
