@@ -7,6 +7,8 @@
     <title>Contato - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/sidebar.css') }}">
+    <script src="{{ asset('assets/js/sidebar.js') }}"></script>
     <style>
         .breadcrumb a {
             color: #4a5568; /* gray-700 */
@@ -21,6 +23,23 @@
     </style>
 </head>
 <body class="bg-gray-100">
+    <!-- Side bar -->
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <button class="close-sidebar">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/">Início</a>
+            <a href="/quem_somos">Quem Somos</a>
+            <a href="/produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
@@ -33,11 +52,12 @@
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
             </nav>
-            <button class="md:hidden text-green focus:outline-none">
+            <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
             </button>
         </div>
     </header>
+
     <!-- Breadcrumb -->
     <nav class="container mx-auto px-6 py-4 text-gray-700 text-sm breadcrumb">
         <ol class="list-none p-0 inline-flex">
@@ -121,25 +141,5 @@
 </body>
 <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
-    const mobileMenuButton = document.querySelector('header button.md\\:hidden');
-    const mobileNav = document.querySelector('header nav');
-    if (mobileMenuButton && mobileNav) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileNav.classList.toggle('hidden');
-            mobileNav.classList.toggle('absolute');
-            mobileNav.classList.toggle('top-16');
-            mobileNav.classList.toggle('left-0');
-            mobileNav.classList.toggle('right-0');
-            mobileNav.classList.toggle('bg-white');
-            mobileNav.classList.toggle('shadow-lg');
-            mobileNav.classList.toggle('p-6');
-            mobileNav.classList.toggle('space-y-4');
-            const links = mobileNav.querySelectorAll('a');
-            links.forEach(link => {
-                link.classList.add('block');
-                link.classList.remove('space-x-6');
-            });
-        });
-    }
 </script>
 </html>

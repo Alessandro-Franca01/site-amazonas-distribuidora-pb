@@ -211,8 +211,8 @@
             <nav>
                 <ul>
                     <li class="mb-2">
-                        <a href="#fitas-e-adesivos" class="category-link flex justify-between items-center">
-                            Fitas e Adesivos
+                        <a href="#contrucao-comunicacao" class="category-link flex justify-between items-center">
+                            Material de Construção e Comunicação Visual
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </li>
@@ -223,8 +223,8 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#outros" class="category-link flex justify-between items-center">
-                            Outros
+                        <a href="#produtos-quimicos-limpeza" class="category-link flex justify-between items-center">
+                            Produtos Químicos e de Limpeza
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </li>
@@ -252,7 +252,7 @@
             </div>
 
             <!-- Fitas e Adesivos Section -->
-            <div id="fitas-e-adesivos" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div id="contrucao-comunicacao" class="bg-white p-6 rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold mb-6">Fitas e Adesivos</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
@@ -294,9 +294,9 @@
                 </div>
             </div>
 
-            <!-- Outros Section -->
-            <div id="outros" class="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold mb-6">Outros Produtos</h2>
+            <!-- Produtos Quimicos e De Limpaza Section -->
+            <div id="produtos-quimicos-limpeza" class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-bold mb-6">Produtos Quimicos e De Limpaza</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
