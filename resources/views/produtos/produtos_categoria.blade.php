@@ -234,11 +234,11 @@
 
         <!-- Product Listing -->
         <section class="w-full md:w-3/4">
-
-            <div id="tintas" class="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold mb-6">Chapas</h2>
+            <!-- Material de Construção e Comunicação Visual Section -->
+            <div id="contrucao-comunicacao" class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-bold mb-6">Material de Construção e Comunicação Visual</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Product Card 1 -->
+                    <!-- Product Card ACM -->
                     <div class="product-card">
                         <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" alt="ACM - Aluminio Composto" class="w-full h-48 object-cover">
                         <div class="p-4">
@@ -247,15 +247,7 @@
                             <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
-                    <!-- Add more Tintas products as needed -->
-                </div>
-            </div>
-
-            <!-- Fitas e Adesivos Section -->
-            <div id="contrucao-comunicacao" class="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold mb-6">Fitas e Adesivos</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Product Card 1 -->
+                    <!-- Product Card Fita Dupla Face - Alta Performace -->
                     <div class="product-card">
                         <img src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}" alt="Fitas e Adesivos" class="w-full h-48 object-cover">
                         <div class="p-4">
@@ -264,7 +256,7 @@
                             <a href="{{ url('/produtos/fita_dupla_face_alta_performance') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
-                    <!-- Product Card 2 -->
+                    <!-- Product Card Fita Forte Adere - Dupla Face -->
                     <div class="product-card">
                         <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
                         <div class="p-4">
@@ -283,10 +275,10 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/primer.png') }}" alt="Primer" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Primer" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Primer Universal</h3>
-                            <p class="text-gray-600 text-sm">Prepara superfícies para melhor aderência da tinta.</p>
+                            <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Kian 1L</h3>
+                            <p class="text-gray-600 text-sm">A tinta mais conhecida pela sua confiabilidade absoluta.</p>
                             <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
@@ -300,11 +292,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/ilhoseira.png') }}" alt="Ilhoseira" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}" alt="Ilhoseira" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Ilhoseira Manual</h3>
-                            <p class="text-gray-600 text-sm">Ferramenta para aplicação de ilhoses.</p>
-                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <h3 class="font-semibold text-lg mb-2">Primer PA02 940ml</h3>
+                            <p class="text-gray-600 text-sm">O Primer PA02 ACM tem a função de promover a adesão das Fitas Adesivas de Espuma Acrílica</p>
+                            <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Product Card for Álcool Isopropanol ST 900 -->

@@ -11,6 +11,8 @@ Route::view('/contato', 'contato');
 Route::view('/produtos/alcool-isopropanol-st-900', 'produtos.alcool_isopropilico_st_900_ml');
 Route::view('/produtos/acm', 'produtos.acm');
 Route::view('/produtos/fita_forte_adere_dupla_face', 'produtos.fita_forte_adere_dupla_face');
+Route::view('/produtos/tinta_sublimatica_kian_1l', 'produtos.tinta_sublimatica_kian_1l');
+Route::view('/produtos/primer_pa02_940ml', 'produtos.primer_pa02_940ml');
 
 Route::get('/produtos/fita_dupla_face_alta_performance', function () {
     return view('produtos.fita_dupla_face_alta_performance');
