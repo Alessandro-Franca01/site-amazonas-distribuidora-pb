@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Fita Forte Adere - Dupla Face | Amazonas Distribuidora PB</title>
+    <title>Ilhós 10mm - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -51,18 +51,17 @@
             <a href="#contato">Contato</a>
         </nav>
     </div>
-
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
+                <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
+                <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
@@ -76,7 +75,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Fita Forte Adere - Dupla Face</span>
+                <span class="breadcrumb-item text-gray-600">Ilhós 10mm</span>
             </div>
         </div>
     </div>
@@ -90,22 +89,31 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" 
-                                alt="Fita Forte Adere - Dupla Face" 
+                            <img src="{{ asset('images/produtos/ilhos_10mm.jpeg') }}" 
+                                alt="Álcool Isopropanol ST 900ml" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Fita Forte Adere - Dupla Face</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Ilhós 10mm</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos. Com seu adesivo de alta resistência, oferece uma fixação permanente que garante uma aderência firme e duradoura em diversas superfícies, como madeira, metal, plástico e vidro. Graças ao seu design de dupla face, permite fixar objetos de forma rápida e eficiente, sem a necessidade de ferramentas adicionais. Sua extensão de 20 metros a torna uma opção versátil para projetos pequenos e grandes. Perfeita para artesanato, decorações, montagem de sinalizações ou qualquer tarefa que exija uma fixação confiável. Com a Fita Forte, otimize seu tempo e obtenha um acabamento profissional.</p>
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">Ilhós macho 10mm P/ ilhóseria Semi automática é confeccionado em ferro galvanizado e serve para as ilhoseiras matriz Margarida 10mm.</p>
                         </div>
-                    
+                        
+                        <div class="mb-4 md:mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
+                                <li>Usos em lonas , faixas, banner, calçados, roupas, papel, sacolas, cortinas, bonés e cintos</li>
+                                <li>Oferecem aplicações com qualidade sem danificar as suas roupas</li>
+                                <li>A galvanização permite uma maior durabilidade para suas aplicações externas</li>
+                            </ul>
+                        </div>
+                        
                         <div class="flex flex-col sm:flex-row items-center gap-3">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
+                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Ilhós 10mm." 
                             class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
                                 <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
                                 Solicitar Orçamento
@@ -133,27 +141,11 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Fita Forte Adere - Dupla Face</td>
+                                        <td class="py-3 text-gray-800">Ilhós</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800"> Bomber </td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Cor</td>
-                                        <td class="py-3 text-gray-800">Verde</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Nome do desenho</td>
-                                        <td class="py-3 text-gray-800"> Liso </td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Comprimento x Largura</td>
-                                        <td class="py-3 text-gray-800">20 m x 12 cm</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Formato de venda</td>
-                                        <td class="py-3 text-gray-800"> Unidade </td>
+                                        <td class="py-3 text-gray-600 font-medium">Fabricante</td>
+                                        <td class="py-3 text-gray-800">GCB Printers</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -164,28 +156,12 @@
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Tipo de Fita Adesiva</td>
-                                        <td class="py-3 text-gray-800">Dupla face</td>
+                                        <td class="py-3 text-gray-600 font-medium">É Kit?</td>
+                                        <td class="py-3 text-gray-800">Não</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Superficieis Recomendadas</td>
-                                        <td class="py-3 text-gray-800">Plástico, Metal, Acrilico, Madeira</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Espessura</td>
-                                        <td class="py-3 text-gray-800">12 mm</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Material</td>
-                                        <td class="py-3 text-gray-800">Massa acrilica</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Acabamento</td>
-                                        <td class="py-3 text-gray-800">Transparente</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Temperatura</td>
-                                        <td class="py-3 text-gray-800">120 °C</td>
+                                        <td class="py-3 text-gray-600 font-medium">Diâmetro</td>
+                                        <td class="py-3 text-gray-800">10 mm</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -198,42 +174,42 @@
         <!-- Produtos Relacionados -->
         <section class="py-12 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos Relacionados</h2>
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos em Destaques</h2>
                 
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
+                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}"/>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
                             <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Silicone Neutro" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
+                        <img alt="ACM - Aluminio Composto" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/acms/acm.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone Neutro</h3>
-                            <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade para diversas aplicações.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">ACM - Aluminio Composto</h3>
+                            <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
+                            <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
+                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
-                            <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Fita Dupla Face - Alta Performace</h3>
+                            <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
+                            <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
+                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
-                            <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseira Semi Automática 10mm</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
+                            <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                 </div>
@@ -278,7 +254,7 @@
     </footer>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
+
         // Galeria de imagens do produto
         const mainImage = document.getElementById('mainProductImage');
         const thumbnails = document.querySelectorAll('.thumbnail-image');

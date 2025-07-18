@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Fita Forte Adere - Dupla Face | Amazonas Distribuidora PB</title>
+    <title>Laca Alt Pro Brilho 1L - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -51,18 +51,17 @@
             <a href="#contato">Contato</a>
         </nav>
     </div>
-
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
+                <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
+                <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
@@ -76,7 +75,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Fita Forte Adere - Dupla Face</span>
+                <span class="breadcrumb-item text-gray-600">Laca Alt Pro Brilho 1L</span>
             </div>
         </div>
     </div>
@@ -90,22 +89,41 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" 
-                                alt="Fita Forte Adere - Dupla Face" 
+                            <img src="{{ asset('images/produtos/laca_alt_pro_brilho_1l.jpeg') }}" 
+                                alt="Álcool Isopropanol ST 900ml" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Fita Forte Adere - Dupla Face</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">VERNIZ LACA PROTETORA UNIVERSAL QUÍMICA 1 LITRO</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos. Com seu adesivo de alta resistência, oferece uma fixação permanente que garante uma aderência firme e duradoura em diversas superfícies, como madeira, metal, plástico e vidro. Graças ao seu design de dupla face, permite fixar objetos de forma rápida e eficiente, sem a necessidade de ferramentas adicionais. Sua extensão de 20 metros a torna uma opção versátil para projetos pequenos e grandes. Perfeita para artesanato, decorações, montagem de sinalizações ou qualquer tarefa que exija uma fixação confiável. Com a Fita Forte, otimize seu tempo e obtenha um acabamento profissional.</p>
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">
+                                O Verniz Laca Protetora Coat com acabamento BRILHANTE, da Universal, é um produto de alta qualidade,
+                                 desenvolvido para proteger impressões digitais sobre tintas base solvente, eco solvente UV e Latex.
+                                Sua fórmula à base de água proporciona um excelente acabamento, formando uma camada incolor uniforme que
+                                 eleva a qualidade do acabamento da impressão em diversos materiais, como banners, signs, adesivos, placas,
+                                 frotas e reproduções artísticas. Além disso, confere alta proteção contra raios UV, realçando a impressão e
+                                 garantindo sua durabilidade
+                            </p>
+                        </div>                        
+                        <div class="mb-4 md:mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Benefícios:</h2>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
+                                <li>Alta resistência às intempéries</li>
+                                <li>Ótimo rendimento</li>
+                                <li>Fácil aplicação</li>
+                                <li>Baixo odor</li>
+                                <li>Excelente proteção do impresso</li>
+                                <li>Ecologicamente correto</li>
+                                <li>Não desbota</li>
+                            </ul>
                         </div>
-                    
+                        
                         <div class="flex flex-col sm:flex-row items-center gap-3">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
+                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Laca Alt Pro Brilho 1L." 
                             class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
                                 <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
                                 Solicitar Orçamento
@@ -133,27 +151,19 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Fita Forte Adere - Dupla Face</td>
+                                        <td class="py-3 text-gray-800">Laca Alt Pro Brilho 1L</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800"> Bomber </td>
+                                        <td class="py-3 text-gray-800">Universal Química</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Cor</td>
-                                        <td class="py-3 text-gray-800">Verde</td>
+                                        <td class="py-3 text-gray-600 font-medium">Volume</td>
+                                        <td class="py-3 text-gray-800">1 L</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Nome do desenho</td>
-                                        <td class="py-3 text-gray-800"> Liso </td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Comprimento x Largura</td>
-                                        <td class="py-3 text-gray-800">20 m x 12 cm</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Formato de venda</td>
-                                        <td class="py-3 text-gray-800"> Unidade </td>
+                                        <td class="py-3 text-gray-600 font-medium">Rendimento Médio</td>
+                                        <td class="py-3 text-gray-800">15 a 20 m² por litro</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -164,32 +174,47 @@
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Tipo de Fita Adesiva</td>
-                                        <td class="py-3 text-gray-800">Dupla face</td>
+                                        <td class="py-3 text-gray-600 font-medium">Composição</td>
+                                        <td class="py-3 text-gray-800">Resina poliuretano dispersa em água</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Superficieis Recomendadas</td>
-                                        <td class="py-3 text-gray-800">Plástico, Metal, Acrilico, Madeira</td>
+                                        <td class="py-3 text-gray-600 font-medium">Rendimento Médio</td>
+                                        <td class="py-3 text-gray-800">15 a 20 m² por litro</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Espessura</td>
-                                        <td class="py-3 text-gray-800">12 mm</td>
+                                        <td class="py-3 text-gray-600 font-medium">Secagem rápida</td>
+                                        <td class="py-3 text-gray-800">Aproximadamente 2 horas</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Material</td>
-                                        <td class="py-3 text-gray-800">Massa acrilica</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Acabamento</td>
-                                        <td class="py-3 text-gray-800">Transparente</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Temperatura</td>
-                                        <td class="py-3 text-gray-800">120 °C</td>
+                                        <td class="py-3 text-gray-600 font-medium">Secagem completa</td>
+                                        <td class="py-3 text-gray-800">72 horas</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aplicações -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Indicação, Preparação e Aplicação -->
+                <div class="mt-12">
+                    <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Indicação, Preparação e Aplicação</h2>
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                        <ul class="list-disc list-inside space-y-4 text-gray-700 text-lg">
+                            <li>
+                                <strong class="text-blue-600">Indicação:</strong> O Verniz Laca Protetora Coat é recomendado para uso em lonas vinílicas com impressão digital, lonas vinílicas reforçadas, vinil adesivo transparente e opaco, chapas de compensado e superfícies cerâmicas.
+                            </li>
+                            <li>
+                                <strong class="text-blue-600">Preparação da superfície:</strong> Antes da aplicação, é importante garantir que a superfície esteja limpa e livre de impurezas, como pó, manchas de gordura ou graxa, mofo e partes soltas. É necessário eliminar qualquer impregnação que possa prejudicar a aderência do produto ao substrato. Recomenda-se aguardar pelo menos 12 horas de secagem antes de aplicar o verniz em superfícies impressas.
+                            </li>
+                            <li>
+                                <strong class="text-blue-600">Aplicação do produto:</strong> Antes de aplicar o Verniz Laca Protetora Coat, é recomendado realizar um teste de aderência. Aplique o produto de maneira a formar uma camada uniforme, tomando cuidado para evitar o acúmulo excessivo em uma única demão. Vale ressaltar que a durabilidade do produto pode variar de acordo com a qualidade da tinta de impressão utilizada.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -278,7 +303,7 @@
     </footer>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
+
         // Galeria de imagens do produto
         const mainImage = document.getElementById('mainProductImage');
         const thumbnails = document.querySelectorAll('.thumbnail-image');
