@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title>Fita Forte Adere - Dupla Face | Amazonas Distribuidora PB</title>
+    <title>Luz Led 12v - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -51,18 +51,17 @@
             <a href="#contato">Contato</a>
         </nav>
     </div>
-
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
+                <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
+                <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/#contato">Contato</a>
+                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none open-sidebar">
                 <span class="material-icons">menu</span>
@@ -76,7 +75,7 @@
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
                 <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
-                <span class="breadcrumb-item text-gray-600">Fita Forte Adere - Dupla Face</span>
+                <span class="breadcrumb-item text-gray-600">Luz Led 12v</span>
             </div>
         </div>
     </div>
@@ -90,22 +89,37 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" 
-                                alt="Fita Forte Adere - Dupla Face" 
+                            <img src="{{ asset('images/produtos/luz_led_12v.jpeg') }}" 
+                                alt="Álcool Isopropanol ST 900ml" 
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
                     </div>
                     
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Fita Forte Adere - Dupla Face</h1>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Luz Led 12v</h1>
                         
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos. Com seu adesivo de alta resistência, oferece uma fixação permanente que garante uma aderência firme e duradoura em diversas superfícies, como madeira, metal, plástico e vidro. Graças ao seu design de dupla face, permite fixar objetos de forma rápida e eficiente, sem a necessidade de ferramentas adicionais. Sua extensão de 20 metros a torna uma opção versátil para projetos pequenos e grandes. Perfeita para artesanato, decorações, montagem de sinalizações ou qualquer tarefa que exija uma fixação confiável. Com a Fita Forte, otimize seu tempo e obtenha um acabamento profissional.</p>
+                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">Módulo LED 6013, 12V para letras caixa luminosos.</p>
+                            <p class="text-base md:text-lg text-gray-700"><strong> Observações: </strong></p>
+                            <p class="text-base md:text-lg text-gray-700">PRODUTO ENVIADO COM NOTA FISCAL ENVIO IMEDIATO</p>
+                            <p class="text-base md:text-lg text-gray-700">ITENS QUE SERÃO ENVIADOS 200pçs Módulo LED 6013 1,5W 12V 3-LED ESCOLHER A COR</p>
                         </div>
-                    
+                        
+                        <div class="mb-4 md:mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
+                                <li>Alto Brilho Alta Qualidade</li>
+                                <li>Fita auto adesiva em cada módulo</li>
+                                <li>Eficiência energética, redução importante nos custos de energia</li>
+                                <li>Baixo calor, alto brilho, funciona bem sob condições adversa</li>
+                                <li>Vida útil longa mais de 50.000 horas, Produto de alta qualidade</li>
+                                <li>Sem chumbo, mercúrio e substâncias; a favor do meio ambiente</li>
+                            </ul>
+                        </div>
+                        
                         <div class="flex flex-col sm:flex-row items-center gap-3">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
+                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre a Luz Led 12v." 
                             class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
                                 <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
                                 Solicitar Orçamento
@@ -133,27 +147,27 @@
                                 <tbody>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Nome do Produto</td>
-                                        <td class="py-3 text-gray-800">Fita Forte Adere - Dupla Face</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800"> Bomber </td>
+                                        <td class="py-3 text-gray-800">Módulo LED 6013 1,5W 12V 3-LED</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
                                         <td class="py-3 text-gray-600 font-medium">Cor</td>
-                                        <td class="py-3 text-gray-800">Verde</td>
+                                        <td class="py-3 text-gray-800">LUZ ESCOLHER COR</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Nome do desenho</td>
-                                        <td class="py-3 text-gray-800"> Liso </td>
+                                        <td class="py-3 text-gray-600 font-medium">Voltagem</td>
+                                        <td class="py-3 text-gray-800">DC 12V</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Comprimento x Largura</td>
-                                        <td class="py-3 text-gray-800">20 m x 12 cm</td>
+                                        <td class="py-3 text-gray-600 font-medium">Ângulo</td>
+                                        <td class="py-3 text-gray-800">165º</td>
                                     </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Formato de venda</td>
-                                        <td class="py-3 text-gray-800"> Unidade </td>
+                                    <tr>
+                                        <td class="py-3 text-gray-600 font-medium">Potência</td>
+                                        <td class="py-3 text-gray-800">1,5W</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 text-gray-600 font-medium">Tipo de LED</td>
+                                        <td class="py-3 text-gray-800">6013 dobro de luminosidade do que LEDs comum</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -164,28 +178,28 @@
                             <table class="w-full">
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Tipo de Fita Adesiva</td>
-                                        <td class="py-3 text-gray-800">Dupla face</td>
+                                        <td class="py-3 text-gray-600 font-medium">Luminosidade</td>
+                                        <td class="py-3 text-gray-800">165 Lumens</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Superficieis Recomendadas</td>
-                                        <td class="py-3 text-gray-800">Plástico, Metal, Acrilico, Madeira</td>
+                                        <td class="py-3 text-gray-600 font-medium">Consumo</td>
+                                        <td class="py-3 text-gray-800">1,5W 0,125ma cada Plaquinha</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Espessura</td>
-                                        <td class="py-3 text-gray-800">12 mm</td>
+                                        <td class="py-3 text-gray-600 font-medium">Quantidade de LEDs</td>
+                                        <td class="py-3 text-gray-800">3-LEDs / Por módulo / Plaquinha</td>
                                     </tr>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Material</td>
-                                        <td class="py-3 text-gray-800">Massa acrilica</td>
+                                        <td class="py-3 text-gray-600 font-medium">Grau de Proteção</td>
+                                        <td class="py-3 text-gray-800">IP67 (A Prova D' água)</td>
                                     </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Acabamento</td>
-                                        <td class="py-3 text-gray-800">Transparente</td>
+                                    <tr>
+                                        <td class="py-3 text-gray-600 font-medium">Ambiente de uso</td>
+                                        <td class="py-3 text-gray-800">-40 graus -+ 50 °C</td>
                                     </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Temperatura</td>
-                                        <td class="py-3 text-gray-800">120 °C</td>
+                                    <tr>
+                                        <td class="py-3 text-gray-600 font-medium">Material do escudo</td>
+                                        <td class="py-3 text-gray-800">INJETADO antiestático</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -195,45 +209,58 @@
             </div>
         </section>
 
+        <!-- Aplicações -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Aplicações</h2>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <span class="material-icons text-5xl text-blue-600 mb-4 mx-auto">cleaning_services</span>
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza de Eletrônicos</h3>
+                    <p class="text-gray-600">Letreiros Sinalização Letra Caixa Luminoso Placa Fachada Sanca Aquário Vitrine Paisagismo Carro Decoração Totem.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Produtos Relacionados -->
         <section class="py-12 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos Relacionados</h2>
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos em Destaques</h2>
                 
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
+                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}"/>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
                             <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Silicone Neutro" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
+                        <img alt="ACM - Aluminio Composto" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/acms/acm.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Silicone Neutro</h3>
-                            <p class="text-gray-600 text-sm">Produtos duráveis e de alta qualidade para diversas aplicações.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">ACM - Aluminio Composto</h3>
+                            <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
+                            <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
+                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Adesivos</h3>
-                            <p class="text-gray-600 text-sm">Impressão digital de alta qualidade para diversas aplicações.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Fita Dupla Face - Alta Performace</h3>
+                            <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
+                            <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
+                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}"/>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseiras</h3>
-                            <p class="text-gray-600 text-sm">A Ilhoseira Semi Automática, uma opção simples para a colocação de ilhós em tecidos.</p>
-                            <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseira Semi Automática 10mm</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
+                            <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
                 </div>

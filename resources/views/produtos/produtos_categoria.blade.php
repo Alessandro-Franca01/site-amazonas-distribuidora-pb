@@ -243,7 +243,7 @@
                         <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" alt="ACM - Aluminio Composto" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">ACM - Aluminio Composto</h3>
-                            <p class="text-gray-600 text-sm">Prepara superfícies para melhor aderência da tinta.</p>
+                            <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
                             <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
@@ -263,6 +263,33 @@
                             <h3 class="font-semibold text-lg mb-2">Fita Forte Adere - Dupla Face</h3>
                             <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
                             <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Ilhoseira Semi Automática 10mm -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}" alt="Ilhoseira Semi Automática 10mm" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Ilhoseira Semi Automática 10mm</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade.</p>
+                            <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Ilhós 10mm -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/ilhos_10mm.jpeg') }}" alt="Ilhós 10mm" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Ilhós 10mm</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade.</p>
+                            <a href="{{ url('/produtos/ilhos_10mm') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Luz Led 12v -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/luz_led_12v.jpeg') }}" alt="Luz Led 12v" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Luz Led 12v</h3>
+                            <p class="text-gray-600 text-sm">Módulo LED 6013, 12V para letras caixa luminosos..</p>
+                            <a href="{{ url('/produtos/luz_led_12v') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Add more Fitas e Adesivos products as needed -->
@@ -303,12 +330,20 @@
                     <div class="product-card">
                         <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" alt="Álcool Isopropanol ST 900" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="font-semibold text-lg mb-2">Álcool Isopropanol ST 900</h3>
+                            <h3 class="font-semibold text-lg mb-2">Álcool Isopropílico ST 900ml</h3>
                             <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônicos.</p>
                             <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Add more Outros products as needed -->
+                     <div class="product-card">
+                        <img src="{{ asset('images/produtos/laca_alt_pro_brilho_1l.jpeg') }}" alt="Laca Alt Pro Brilho 1L" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Laca Alt Pro Brilho 1L</h3>
+                            <p class="text-gray-600 text-sm">Produto de alta qualidade para limpeza de componentes eletrônicos.</p>
+                            <a href="{{ url('/produtos/laca_alt_pro_brilho_1l') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
