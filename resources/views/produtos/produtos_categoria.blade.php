@@ -86,11 +86,11 @@
             z-index: 1000;
             overflow-y: auto;
         }
-        
+
         .sidebar.open {
             left: 0;
         }
-        
+
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -103,12 +103,12 @@
             visibility: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .sidebar-overlay.open {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .sidebar-header {
             padding: 1rem;
             border-bottom: 1px solid #eee;
@@ -116,11 +116,11 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .sidebar-nav {
             padding: 1rem;
         }
-        
+
         .sidebar-nav a {
             display: block;
             padding: 0.75rem 0;
@@ -129,17 +129,100 @@
             text-decoration: none;
             transition: all 0.2s;
         }
-        
+
         .sidebar-nav a:hover {
             color: #2e7d32; /* Verde similar ao seu tema */
             padding-left: 0.5rem;
         }
-        
+
         .close-sidebar {
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
+        }
+        /* Adicione estas regras ao seu CSS existente */
+        .category-container {
+            position: relative;
+        }
+
+        .category-products {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 300px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .category-link:hover + .category-products,
+        .category-products:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product-preview {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #f1f5f9;
+            transition: all 0.2s;
+        }
+
+        .product-preview:hover {
+            background-color: #f8fafc;
+        }
+
+        .product-preview img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 0.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .product-preview-info {
+            flex: 1;
+        }
+
+        .product-preview-title {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #1e293b;
+        }
+
+        .product-preview-link {
+            font-size: 0.75rem;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1024px) {
+            .category-products {
+                position: static;
+                width: auto;
+                box-shadow: none;
+                border: none;
+                padding: 0.5rem 0 0 1rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+            }
+
+            .category-link:hover + .category-products,
+            .category-products:hover {
+                max-height: 1000px;
+            }
         }
     </style>
 </head>
@@ -205,28 +288,101 @@
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-6 py-8 flex flex-col md:flex-row">
-        <!-- Categories Sidebar -->
+        <!-- Modifique o Categories Sidebar no seu HTML -->
         <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md mb-8 md:mb-0 md:mr-8 h-fit sticky top-4">
             <h2 class="text-xl font-semibold mb-4">CATEGORIAS</h2>
             <nav>
                 <ul>
-                    <li class="mb-2">
+                    <!-- Material de Construção e Comunicação Visual -->
+                    <li class="mb-2 category-container">
                         <a href="#contrucao-comunicacao" class="category-link flex justify-between items-center">
                             Material de Construção e Comunicação Visual
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
                         </a>
+                        <div class="category-products">
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" alt="ACM">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">ACM - Aluminio Composto</div>
+                                    <a href="{{ url('/produtos/acm') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}" alt="Fita Dupla Face">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Fita Dupla Face - Alta Performace</div>
+                                    <a href="{{ url('/produtos/fita_dupla_face_alta_performance') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" alt="Fita Forte">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Fita Forte Adere - Dupla Face</div>
+                                    <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}" alt="Ilhoseira">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Ilhoseira Semi Automática 10mm</div>
+                                    <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="mb-2">
+
+                    <!-- Tintas -->
+                    <li class="mb-2 category-container">
                         <a href="#tintas" class="category-link flex justify-between items-center">
                             Tintas
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
                         </a>
+                        <div class="category-products">
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Tinta Sublimática">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Tinta Sublimática Kian 1L</div>
+                                    <a href="#" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="mb-2">
+
+                    <!-- Produtos Químicos e de Limpeza -->
+                    <li class="mb-2 category-container">
                         <a href="#produtos-quimicos-limpeza" class="category-link flex justify-between items-center">
                             Produtos Químicos e de Limpeza
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
                         </a>
+                        <div class="category-products">
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}" alt="Primer">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Primer PA02 940ml</div>
+                                    <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" alt="Álcool Isopropílico">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Álcool Isopropílico ST 900ml</div>
+                                    <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <img src="{{ asset('images/produtos/laca_alt_pro_brilho_1l.jpeg') }}" alt="Laca">
+                                <div class="product-preview-info">
+                                    <div class="product-preview-title">Laca Alt Pro Brilho 1L</div>
+                                    <a href="{{ url('/produtos/laca_alt_pro_brilho_1l') }}" class="product-preview-link">Ver produto →</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -393,19 +549,19 @@
             const overlay = document.querySelector('.sidebar-overlay');
             const openBtn = document.querySelector('.open-sidebar');
             const closeBtn = document.querySelector('.close-sidebar');
-            
+
             openBtn.addEventListener('click', function() {
                 sidebar.classList.add('open');
                 overlay.classList.add('open');
                 document.body.style.overflow = 'hidden';
             });
-            
+
             closeBtn.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
                 document.body.style.overflow = '';
             });
-            
+
             overlay.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');

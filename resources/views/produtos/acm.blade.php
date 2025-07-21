@@ -43,11 +43,11 @@
             z-index: 1000;
             overflow-y: auto;
         }
-        
+
         .sidebar.open {
             left: 0;
         }
-        
+
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -60,12 +60,12 @@
             visibility: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .sidebar-overlay.open {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .sidebar-header {
             padding: 1rem;
             border-bottom: 1px solid #eee;
@@ -73,11 +73,11 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .sidebar-nav {
             padding: 1rem;
         }
-        
+
         .sidebar-nav a {
             display: block;
             padding: 0.75rem 0;
@@ -86,12 +86,12 @@
             text-decoration: none;
             transition: all 0.2s;
         }
-        
+
         .sidebar-nav a:hover {
             color: #2e7d32; /* Verde similar ao seu tema */
             padding-left: 0.5rem;
         }
-        
+
         .close-sidebar {
             background: none;
             border: none;
@@ -157,34 +157,34 @@
                     <!-- Imagem do Produto -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" 
-                                alt="ACM - Chapa de aluminio composto" 
+                            <img src="{{ asset('images/produtos/acms/acm.jpeg') }}"
+                                alt="ACM - Chapa de aluminio composto"
                                 class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                         </div>
                         <div class="mt-4 grid grid-cols-3 gap-2">
-                            <img src="{{ asset('images/produtos/acms/acm_02.jpeg') }}" 
-                                alt="ACM IMG 02" 
+                            <img src="{{ asset('images/produtos/acms/acm_02.jpeg') }}"
+                                alt="ACM IMG 02"
                                 class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
-                            <img src="{{ asset('images/produtos/acms/acm_03.jpeg') }}" 
+                            <img src="{{ asset('images/produtos/acms/acm_03.jpeg') }}"
                                 alt="ACM IMG 03"
                                 class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
-                            <img src="{{ asset('images/produtos/acms/acm_04.jpeg') }}" 
+                            <img src="{{ asset('images/produtos/acms/acm_04.jpeg') }}"
                                 alt="ACM IMG 04"
                                 class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
-                            <img src="{{ asset('images/produtos/acms/acm_05.jpeg') }}" 
-                                alt="ACM IMG 05" 
+                            <img src="{{ asset('images/produtos/acms/acm_05.jpeg') }}"
+                                alt="ACM IMG 05"
                                 class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
                         </div>
                     </div>
-                    
+
                     <!-- Informações do Produto -->
                     <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
                         <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">ACM - Chapa de aluminio composto</h1>
-                        
+
                         <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
                             <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas. É composto por duas lâminas de alumínio com um núcleo de polietileno, oferecendo leveza e resistência. As chapas de ACM podem ser encontradas em diversas espessuras (3mm a 6mm) e tamanhos, com largura padrão de 1.220mm e 1.500mm, e comprimento de até 6000mm.</p>
                         </div>
-                        
+
                         <div class="mb-4 md:mb-6">
                             <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Características:</h2>
                             <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
@@ -196,14 +196,14 @@
                                 <li><strong> Espessuras </strong> Geralmente, varia entre 3mm e 6mm.</li>
                             </ul>
                         </div>
-                        
+
                         <div class="flex flex-col sm:flex-row items-center gap-3">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
+                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900"
                             class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
-                                <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
+                                <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span>
                                 Solicitar Orçamento
                             </a>
-                            <a href="/contato" 
+                            <a href="/contato"
                             class="w-full sm:w-auto border border-blue-600 text-blue-600 py-2 md:py-3 px-4 md:px-6 rounded-lg hover:bg-blue-50 transition duration-300 text-sm md:text-base text-center">
                                 Mais Informações
                             </a>
@@ -217,7 +217,7 @@
         <section class="py-12 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Especificações Técnicas</h2>
-                
+
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6 border-b md:border-b-0 md:border-r border-gray-200">
@@ -247,7 +247,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-blue-700 mb-4">Propriedades Físico-Químicas</h3>
                             <table class="w-full">
@@ -280,20 +280,20 @@
         <section class="py-12 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Aplicações</h2>
-                
+
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">architecture</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Fachadas</h3>
                         <p class="text-gray-600">Revestimento de fachadas de edifícios comerciais e residenciais.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">brush</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Revestimentos internos</h3>
                         <p class="text-gray-600">Decoração de paredes e divisórias internas.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">campaign</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Painéis e letreiros</h3>
@@ -313,20 +313,20 @@
         <section class="py-12 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Vantagens</h2>
-                
+
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">devices</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza de Eletrônicos</h3>
                         <p class="text-gray-600">Ideal para limpeza de placas de circuito, componentes eletrônicos e equipamentos de precisão.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">format_paint</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Comunicação Visual</h3>
                         <p class="text-gray-600">Perfeito para limpeza de superfícies antes da aplicação de adesivos, vinil e outros materiais gráficos.</p>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <span class="material-icons text-5xl text-blue-600 mb-4">factory</span>
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Limpeza Industrial</h3>
@@ -340,7 +340,7 @@
         <section class="py-12 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos Relacionados</h2>
-                
+
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/primer.png') }}"/>
@@ -350,7 +350,7 @@
                             <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img alt="Silicone Neutro" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/silicone_neutro.png') }}"/>
                         <div class="p-6">
@@ -359,7 +359,7 @@
                             <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/adesivos.png') }}"/>
                         <div class="p-6">
@@ -368,7 +368,7 @@
                             <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
                         </div>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/ilhoseira.png') }}"/>
                         <div class="p-6">
@@ -425,26 +425,26 @@
             const overlay = document.querySelector('.sidebar-overlay');
             const openBtn = document.querySelector('.open-sidebar');
             const closeBtn = document.querySelector('.close-sidebar');
-            
+
             openBtn.addEventListener('click', function() {
                 sidebar.classList.add('open');
                 overlay.classList.add('open');
                 document.body.style.overflow = 'hidden';
             });
-            
+
             closeBtn.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
                 document.body.style.overflow = '';
             });
-            
+
             overlay.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
                 document.body.style.overflow = '';
             });
         });
-        
+
         // Galeria de imagens do produto
         const mainImage = document.getElementById('mainProductImage');
         const thumbnails = document.querySelectorAll('.thumbnail-image');
@@ -472,7 +472,7 @@
         if (mainImage) {
             mainImage.addEventListener('click', () => openFullscreen(mainImage.src));
         }
-        
+
         if (thumbnails.length > 0) {
             thumbnails.forEach(thumb => {
                 thumb.addEventListener('click', () => {
