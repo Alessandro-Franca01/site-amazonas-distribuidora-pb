@@ -20,10 +20,10 @@ Route::view('/produtos/ponteira', 'produtos.ponteira');
 Route::view('/produtos/adesivo_branco', 'produtos.adesivo_branco');
 Route::view('/produtos/adesivo_perfurado', 'produtos.adesivo_perfurado');
 Route::view('/produtos/pvc_expandido', 'produtos.pvc_expandido');
-
-Route::get('/produtos/fita_dupla_face_alta_performance', function () {
-    return view('produtos.fita_dupla_face_alta_performance');
-});
+Route::view('/produtos/fita_dupla_face_alta_performance', 'produtos.fita_dupla_face_alta_performance');
+Route::view('/produtos/silicone_neutro_incolor_260g', 'produtos.silicone_neutro_incolor_260g');
+Route::view('/produtos/tinta_sublimática_marabu', 'produtos.tinta_sublimática_marabu');
+Route::view('/produtos/tinta_mara_jet_cyan_500ml', 'produtos.tinta_mara_jet_cyan_500ml');
 
 Route::get('/produtos', function () {
     return view('produtos.produtos_categoria');

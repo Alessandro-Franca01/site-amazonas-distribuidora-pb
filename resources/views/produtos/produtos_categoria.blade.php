@@ -239,7 +239,17 @@
         <nav class="sidebar-nav">
             <a href="/">Início</a>
             <a href="/quem_somos">Quem Somos</a>
-            <a href="#produtos">Produtos</a>
+            <details class="group">
+                <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-gray-700 hover:text-green-600 transition duration-300">
+                    <span class="text-gray-700 hover:text-green-600 transition duration-300">Produtos</span>
+                    <span class="material-icons group-open:rotate-90 transition-transform">chevron_right</span>
+                </summary>
+                <ul class="ml-4 mt-2 space-y-2">
+                    <li><a href="#contrucao-comunicacao" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Material de Construção e Comunicação Visual</a></li>
+                    <li><a href="#tintas" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Tintas</a></li>
+                    <li><a href="#produtos-quimicos-limpeza" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Produtos Químicos e de Limpeza</a></li>
+                </ul>
+            </details>
             <a href="/contato">Contato</a>
         </nav>
     </div>
@@ -254,7 +264,14 @@
             <nav class="hidden md:flex space-x-6">
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
+                <div class="relative group">
+                    <a class="text-gray-700 hover:text-green-600 transition duration-300 cursor-pointer" href="/produtos">Produtos</a>
+                    <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="#contrucao-comunicacao" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Material de Construção e Comunicação Visual</a>
+                        <a href="#tintas" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Tintas</a>
+                        <a href="#produtos-quimicos-limpeza" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Produtos Químicos e de Limpeza</a>
+                    </div>
+                </div>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
             </nav>
             <button class="md:hidden text-green focus:outline-none open-sidebar">
@@ -289,7 +306,7 @@
     <!-- Main Content Area -->
     <main class="container mx-auto px-6 py-8 flex flex-col md:flex-row">
         <!-- Modifique o Categories Sidebar no seu HTML -->
-        <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md mb-8 md:mb-0 md:mr-8 h-fit sticky top-4">
+        <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md mb-8 md:mb-0 md:mr-8 h-fit md:sticky md:top-4">
             <h2 class="text-xl font-semibold mb-4">CATEGORIAS</h2>
             <nav>
                 <ul>
@@ -448,7 +465,44 @@
                             <a href="{{ url('/produtos/luz_led_12v') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
-                    <!-- Add more Fitas e Adesivos products as needed -->
+                    <!-- Product Card PVC -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/pvc/pvc_expandido_branco.jpeg') }}" alt="Chapa de PVC Expandido" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Chapa de PVC Expandido</h3>
+                            <p class="text-gray-600 text-sm">Seu acabamento liso e uniforme facilitam a impressão, o que proporciona excelentes resultados nos mais diversos processos produtivos.</p>
+                            <a href="{{ url('/produtos/pvc_expandido') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Adesivo Branco -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/adesivo/adesivo_branco_brilho.jpeg') }}" alt="Adesivo Branco Brilho e Fosco" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Adesivo Branco Brilho e Fosco</h3>
+                            <p class="text-gray-600 text-sm">O Vinil Adesivo Branco Brilho é um material perfeito para àqueles que buscam unir praticidade na produção,
+                            com uma qualidade de produto superior, junto da boa e velha criatividade.</p>
+                            <a href="{{ url('/produtos/adesivo_branco') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Adesivo Perfurado -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/adesivo/adesivo_perfurado_01.jpeg') }}" alt="Adesivo Perfurado" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Adesivo Perfurado</h3>
+                            <p class="text-gray-600 text-sm">A Película Perfurada oferece controle de luminosidade e temperatura devido as perfurações
+                            serem pequenas elas bloqueiam parte da luz solar e dos raios UV</p>
+                            <a href="{{ url('/produtos/adesivo_perfurado') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card Adesivo Perfurado -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/silicone_neutro_incolor_260g.jpeg') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Silicone Neutro</h3>
+                            <p class="text-gray-600 text-sm">Vedação interna e externa com alto desempenhoVedação interna e externa com alto desempenho.</p>
+                            <a href="{{ url('/produtos/silicone_neutro_incolor_260g') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -458,11 +512,30 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Primer" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Tinta Sublimática Kian 1L" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Kian 1L</h3>
-                            <p class="text-gray-600 text-sm">A tinta mais conhecida pela sua confiabilidade absoluta.</p>
-                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <p class="text-gray-600 text-sm">A tinta mais conhecida pela sua confiabilidade absoluta. Indicada para uma produção industrial, pela possibilidade de impressão em papéis leves ou não tratados.</p>
+                            <a href="{{ url('/produtos/tinta_sublimatica_kian_1l') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/tinta_sublimática_marabu.jpeg') }}" alt="Tinta Sublimática Texa®Jet DX-SCF" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Texa®Jet DX-SCF | Marabu</h3>
+                            <p class="text-gray-600 text-sm">A Texa®Jet DX-SCF é uma tinta sublimática à base de água desenvolvida especialmente para impressoras com cabeçotes Epson® micro piezoelétricos.</p>
+                            <a href="{{ url('/produtos/tinta_sublimática_marabu') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/tinta_mara_jet_cyan_500ml.jpeg') }}" alt="Tinta Mara Jet" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Tinta Mara Jet Cyan 500ml</h3>
+                            <p class="text-gray-600 text-sm">A Tinta Eco Solvente Mara®Jet DI-LSX é ideal para impressão digital em películas de PVC auto adesivas
+                            e materiais encerados à base de PVC.</p>
+                            <a href="{{ url('/produtos/tinta_mara_jet_cyan_500ml') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Add more Tintas products as needed -->
@@ -542,6 +615,11 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-green-700 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out opacity-0 invisible">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
     <script>
         // Side bar codes:
         document.addEventListener('DOMContentLoaded', function() {
@@ -566,6 +644,26 @@
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
                 document.body.style.overflow = '';
+            });
+        });
+
+        // Scroll to Top Button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) { // Show button after scrolling down 200px
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll animation
             });
         });
     </script>
