@@ -494,6 +494,15 @@
                             <a href="{{ url('/produtos/adesivo_perfurado') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
+                    <!-- Product Card Adesivo Perfurado -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/silicone_neutro_incolor_260g.jpeg') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Silicone Neutro</h3>
+                            <p class="text-gray-600 text-sm">Vedação interna e externa com alto desempenhoVedação interna e externa com alto desempenho.</p>
+                            <a href="{{ url('/produtos/silicone_neutro_incolor_260g') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -503,11 +512,30 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Primer" class="w-full h-48 object-cover">
+                        <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Tinta Sublimática Kian 1L" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Kian 1L</h3>
-                            <p class="text-gray-600 text-sm">A tinta mais conhecida pela sua confiabilidade absoluta.</p>
-                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <p class="text-gray-600 text-sm">A tinta mais conhecida pela sua confiabilidade absoluta. Indicada para uma produção industrial, pela possibilidade de impressão em papéis leves ou não tratados.</p>
+                            <a href="{{ url('/produtos/tinta_sublimatica_kian_1l') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/tinta_sublimática_marabu.jpeg') }}" alt="Tinta Sublimática Texa®Jet DX-SCF" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Texa®Jet DX-SCF | Marabu</h3>
+                            <p class="text-gray-600 text-sm">A Texa®Jet DX-SCF é uma tinta sublimática à base de água desenvolvida especialmente para impressoras com cabeçotes Epson® micro piezoelétricos.</p>
+                            <a href="{{ url('/produtos/tinta_sublimática_marabu') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/tinta_mara_jet_cyan_500ml.jpeg') }}" alt="Tinta Mara Jet" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Tinta Mara Jet Cyan 500ml</h3>
+                            <p class="text-gray-600 text-sm">A Tinta Eco Solvente Mara®Jet DI-LSX é ideal para impressão digital em películas de PVC auto adesivas
+                            e materiais encerados à base de PVC.</p>
+                            <a href="{{ url('/produtos/tinta_mara_jet_cyan_500ml') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Add more Tintas products as needed -->
