@@ -24,7 +24,7 @@
                 <div class="w-full lg:w-1/2">
                     <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
                         <img src="{{ asset('images/produtos/pvc/pvc_expandido_branco.jpeg') }}"
-                             alt="Ponteiras para Banner e Faixas"
+                             alt="PVC Expandido"
                              class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                     </div>
                     <div class="mt-4 grid grid-cols-3 gap-2">
