@@ -25,6 +25,7 @@ Route::view('/produtos/fita_dupla_face_alta_performance', 'produtos.fita_dupla_f
 Route::view('/produtos/silicone_neutro_incolor_260g', 'produtos.silicone_neutro_incolor_260g');
 Route::view('/produtos/tinta_sublimática_marabu', 'produtos.tinta_sublimática_marabu');
 Route::view('/produtos/tinta_mara_jet_cyan_500ml', 'produtos.tinta_mara_jet_cyan_500ml');
+Route::view('/produtos/poxpur_flex_pu_colors_base_poliuretano', 'produtos.poxpur_flex_pu_colors_base_poliuretano');
 
 Route::get('/produtos', function () {
     return view('produtos.produtos_categoria');

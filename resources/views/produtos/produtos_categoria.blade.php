@@ -503,6 +503,15 @@
                             <a href="{{ url('/produtos/silicone_neutro_incolor_260g') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
+                    <!-- Product Card ACM Color -->
+                    <div class="product-card">
+                        <img src="{{ asset('images/produtos/poxpur_flex_pu_colors_base_poliuretano.jpeg') }}" alt="Silicone Neutro" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">SEM TEXTO</h3>
+                            <p class="text-gray-600 text-sm">Recuros somente com a imagem</p>
+                            <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
