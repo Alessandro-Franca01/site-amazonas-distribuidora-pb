@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductSearchController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,3 +29,6 @@ Route::view('/produtos/tinta_mara_jet_cyan_500ml', 'produtos.tinta_mara_jet_cyan
 Route::get('/produtos', function () {
     return view('produtos.produtos_categoria');
 });
+
+Route::get('/buscar', [ProductSearchController::class, 'search'])->name('product.search');
+Route::get('/api/products', [ProductSearchController::class, 'getProducts'])->name('api.products');

@@ -91,11 +91,11 @@
             z-index: 1000;
             overflow-y: auto;
         }
-        
+
         .sidebar.open {
             left: 0;
         }
-        
+
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -108,12 +108,12 @@
             visibility: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .sidebar-overlay.open {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .sidebar-header {
             padding: 1rem;
             border-bottom: 1px solid #eee;
@@ -121,11 +121,11 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .sidebar-nav {
             padding: 1rem;
         }
-        
+
         .sidebar-nav a {
             display: block;
             padding: 0.75rem 0;
@@ -134,17 +134,34 @@
             text-decoration: none;
             transition: all 0.2s;
         }
-        
+
         .sidebar-nav a:hover {
             color: #2e7d32; /* Verde similar ao seu tema */
             padding-left: 0.5rem;
         }
-        
+
         .close-sidebar {
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
+        }
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hover\:bg-green-700:hover {
+            background-color: #2e7d32;
         }
     </style>
 </head>
@@ -230,21 +247,21 @@
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato" 
+                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">CASO DE USO 1</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM" 
+                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">CASO DE USO 2</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico" 
+                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">CASO DE USO 3</h3>
@@ -256,14 +273,14 @@
 
         <!-- Produtos em Destaque -->
         <section class="py-16 bg-gray-100" id="destaques">
-            
+
             <div class="container mx-auto px-6 relative z-10">
                 <h2 class="text-4xl font-bold text-center text-green-700 mb-12">PRODUTOS EM DESTAQUE</h2>
-                
+
                 <!-- Linha única (full width) -->
                 <div class="grid grid-cols-1 mb-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 lg:h-96">
-                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato" 
+                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">CHAPAS DE POLICARBONATO</h3>
@@ -274,14 +291,14 @@
                 <!-- Linha dupla (apenas em desktop) -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM" 
+                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">ACM</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico" 
+                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
                             <h3 class="text-2xl font-bold text-white">ACRÍLICO</h3>
@@ -293,15 +310,38 @@
 
         <!-- Produtos -->
         <section class="py-16 bg-white relative" id="produtos">
-   
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-green-700 mb-12">Nossos Produtos</h2>
-                <div class="mb-12 max-w-2xl mx-auto">
-                    <div class="relative">
-                        <input class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none shadow-sm" id="search-product" placeholder="Buscar por produto ou categoria..." type="text"/>
+
+            <div class="mb-12 max-w-2xl mx-auto">
+                <form action="{{ route('product.search') }}" method="GET" class="flex items-center gap-2">
+                    <div class="relative flex-grow">
+                        <input class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none shadow-sm"
+                               id="search-product"
+                               name="q"
+                               placeholder="Buscar por produto..."
+                               type="text"
+                               list="products-list"
+                               required
+                               autocomplete="off"/>
                         <span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+
+                        <datalist id="products-list">
+                            @foreach(\App\Enums\ProdutoEnum::getNomesProdutos() as $product)
+                                <option value="{{ $product }}"></option>
+                            @endforeach
+                        </datalist>
                     </div>
-                </div>
+
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg shadow-md transition-colors duration-300 flex items-center justify-center">
+                        <span class="material-icons mr-2">search</span>
+                        Buscar
+                    </button>
+                </form>
+
+                @if(session('searchError'))
+                    <p class="text-red-500 text-sm mt-2 text-center">{{ session('searchError') }}</p>
+                @endif
+            </div>
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
                         <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}">
@@ -390,7 +430,7 @@
 
 
                 <div class="text-center mt-12">
-                    <a 
+                    <a
                         class="bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md"
                         href="{{ url('/produtos') }}">
                         Ver Todos os Produtos
@@ -398,14 +438,14 @@
                 </div>
             </div>
         </section>
-  
+
         <!-- Seção de Promoção Instagram e WhatsApp -->
         <section class="py-16 bg-gray-100" id="promocao">
             <div class="container mx-auto px-6 promo-section md:flex md:justify-around">
                 <div class="promo-item text-center mb-8 md:mb-0 md:w-1/2 px-4">
                     <a href="https://www.instagram.com/amazonasdistribuidorapb/" target="_blank" class="block">
-                        <img src="{{ asset('images/instagram_banner.png') }}" 
-                            alt="Instagram Amazonas Distribuidora PB" 
+                        <img src="{{ asset('images/instagram_banner.png') }}"
+                            alt="Instagram Amazonas Distribuidora PB"
                             class="promo-img rounded-lg shadow-lg w-full h-80 object-cover hover:shadow-xl transition-shadow duration-300"/>
                     </a>
                     <h3 class="text-2xl font-bold text-green-700 mt-4">Siga-nos no Instagram!</h3>
@@ -414,7 +454,7 @@
                 <div class="promo-item text-center md:w-1/2 px-4">
                     <a href="https://api.whatsapp.com/send?phone=83998530445" target="_blank" class="block">
                         <img src="{{ asset('images/atendimento_whatssap.jpeg') }}"
-                            alt="WhatsApp Amazonas Distribuidora PB" 
+                            alt="WhatsApp Amazonas Distribuidora PB"
                             class="promo-img rounded-lg shadow-lg w-full h-80 object-cover hover:shadow-xl transition-shadow duration-300"/>
                     </a>
                     <h3 class="text-2xl font-bold text-green-700 mt-4">Fale Conosco pelo WhatsApp!</h3>
@@ -424,7 +464,7 @@
     </section>
 
     <!-- Botão do whatssap -->
-    <a href="https://api.whatsapp.com/send?phone=83998530445" 
+    <a href="https://api.whatsapp.com/send?phone=83998530445"
         target="_blank"
         class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:shadow-xl animate-bounce"
         style="animation-iteration-count: 3;">
@@ -470,25 +510,49 @@
         </div>
     </footer>
     <script>
+        // Pesquisa de produtos
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-product');
+            const searchForm = document.querySelector('form[action="{{ route("product.search") }}"]');
+            const searchButton = searchForm.querySelector('button[type="submit"]');
+
+            // Focar no campo de pesquisa quando a página carrega
+            // searchInput.focus();
+
+            // Habilitar/desabilitar botão conforme conteúdo
+            searchInput.addEventListener('input', function() {
+                searchButton.disabled = this.value.trim() === '';
+            });
+
+            // Inicialmente desabilitar o botão se o campo estiver vazio
+            searchButton.disabled = searchInput.value.trim() === '';
+
+            // Feedback visual ao enviar
+            searchForm.addEventListener('submit', function() {
+                searchButton.innerHTML = '<span class="material-icons mr-2">hourglass_top</span> Buscando...';
+                searchButton.disabled = true;
+            });
+        });
+
         // Side bar codes:
         document.addEventListener('DOMContentLoaded', function() {
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.querySelector('.sidebar-overlay');
             const openBtn = document.querySelector('.open-sidebar');
             const closeBtn = document.querySelector('.close-sidebar');
-            
+
             openBtn.addEventListener('click', function() {
                 sidebar.classList.add('open');
                 overlay.classList.add('open');
                 document.body.style.overflow = 'hidden';
             });
-            
+
             closeBtn.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
                 document.body.style.overflow = '';
             });
-            
+
             overlay.addEventListener('click', function() {
                 sidebar.classList.remove('open');
                 overlay.classList.remove('open');
@@ -503,55 +567,55 @@
         const nextButton = document.getElementById('next-slide');
         let current = 0;
         let slideInterval;
-    
+
         // Função para mostrar o slide atual
         function showSlide(index) {
             // Esconde todos os slides
             slides.forEach(slide => slide.classList.add('hidden'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             // Mostra o slide atual
             slides[index].classList.remove('hidden');
             dots[index].classList.add('active');
             current = index;
         }
-    
+
         // Função para ir para o próximo slide
         function nextSlide() {
             const next = (current + 1) % slides.length;
             showSlide(next);
         }
-    
+
         // Função para ir para o slide anterior
         function prevSlide() {
             const prev = (current - 1 + slides.length) % slides.length;
             showSlide(prev);
         }
-    
+
         // Adiciona eventos de clique aos botões
         if (prevButton && nextButton) {
             prevButton.addEventListener('click', () => {
                 prevSlide();
                 resetInterval();
             });
-            
+
             nextButton.addEventListener('click', () => {
                 nextSlide();
                 resetInterval();
             });
         }
-    
+
         // Função para reiniciar o intervalo automático
         function resetInterval() {
             clearInterval(slideInterval);
             startInterval();
         }
-    
+
         // Função para iniciar o intervalo automático
         function startInterval() {
             slideInterval = setInterval(nextSlide, 4000);
         }
-    
+
         // Inicia o carrossel
         startInterval();
     </script>
