@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductSearchController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::view('/quem_somos', 'quem_somos');
@@ -27,8 +27,13 @@ Route::view('/produtos/tinta_sublimática_marabu', 'produtos.tinta_sublimática_
 Route::view('/produtos/tinta_mara_jet_cyan_500ml', 'produtos.tinta_mara_jet_cyan_500ml');
 Route::view('/produtos/poxpur_flex_pu_colors_base_poliuretano', 'produtos.poxpur_flex_pu_colors_base_poliuretano');
 
+// Rota para a página de busca de produtos
+Route::view('/categorias/material_construcao_comunicacao_visual', 'categorias.material_construcao_comunicacao_visual');
+Route::view('/categorias/tintas', 'categorias.tintas');
+Route::view('/categorias/produtos_quimicos_e_limpeza', 'categorias.produtos_quimicos_e_limpeza');
+
 Route::get('/produtos', function () {
-    return view('produtos.produtos_categoria');
+    return view('categorias.index');
 });
 
 Route::get('/buscar', [ProductSearchController::class, 'search'])->name('product.search');
