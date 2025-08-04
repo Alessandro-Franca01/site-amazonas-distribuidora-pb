@@ -241,13 +241,13 @@
             <a href="/quem_somos">Quem Somos</a>
             <details class="group">
                 <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-gray-700 hover:text-green-600 transition duration-300">
-                    <span class="text-gray-700 hover:text-green-600 transition duration-300">Produtos</span>
+                    <span class="text-gray-700 hover:text-green-600 transition duration-300"><a class="text-gray-700 hover:text-green-600 transition duration-300 cursor-pointer" href="{{url('/produtos')}}">Produtos</a></span>
                     <span class="material-icons group-open:rotate-90 transition-transform">chevron_right</span>
                 </summary>
                 <ul class="ml-4 mt-2 space-y-2">
-                    <li><a href="#contrucao-comunicacao" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Material de Construção e Comunicação Visual</a></li>
-                    <li><a href="#tintas" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Tintas</a></li>
-                    <li><a href="#produtos-quimicos-limpeza" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Produtos Químicos e de Limpeza</a></li>
+                    <li><a href="{{ url('/categorias/material_construcao_comunicacao_visual') }}" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Material de Construção e Comunicação Visual</a></li>
+                    <li><a href="{{ url('/categorias/tintas') }}" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Tintas</a></li>
+                    <li><a href="{{ url('/categorias/produtos_quimicos_e_limpeza') }}" class="block py-1 text-gray-600 hover:text-green-500 transition duration-300">Produtos Químicos e de Limpeza</a></li>
                 </ul>
             </details>
             <a href="/contato">Contato</a>
@@ -265,11 +265,11 @@
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
                 <div class="relative group">
-                    <a class="text-gray-700 hover:text-green-600 transition duration-300 cursor-pointer" href="/produtos">Produtos</a>
+                    <a class="text-gray-700 hover:text-green-600 transition duration-300 cursor-pointer" href="{{url('/produtos')}}">Produtos</a>
                     <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="#contrucao-comunicacao" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Material de Construção e Comunicação Visual</a>
-                        <a href="#tintas" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Tintas</a>
-                        <a href="#produtos-quimicos-limpeza" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Produtos Químicos e de Limpeza</a>
+                        <a href="{{ url('/categorias/material_construcao_comunicacao_visual') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Material de Construção e Comunicação Visual</a>
+                        <a href="{{ url('/categorias/tintas') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Tintas</a>
+                        <a href="{{ url('/categorias/produtos_quimicos_e_limpeza') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Produtos Químicos e de Limpeza</a>
                     </div>
                 </div>
                 <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
@@ -312,94 +312,32 @@
                 <ul>
                     <!-- Material de Construção e Comunicação Visual -->
                     <li class="mb-2 category-container">
-                        <a href="#contrucao-comunicacao" class="category-link flex justify-between items-center">
+                        <a href="{{ url('/categorias/material_construcao_comunicacao_visual') }}" class="category-link flex justify-between items-center">
                             Material de Construção e Comunicação Visual
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <div class="category-products">
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/acms/acm.jpeg') }}" alt="ACM">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">ACM - Aluminio Composto</div>
-                                    <a href="{{ url('/produtos/acm') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}" alt="Fita Dupla Face">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Fita Dupla Face - Alta Performace</div>
-                                    <a href="{{ url('/produtos/fita_dupla_face_alta_performance') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/fitas/fita_forte_adere_dupla_face.jpeg') }}" alt="Fita Forte">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Fita Forte Adere - Dupla Face</div>
-                                    <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}" alt="Ilhoseira">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Ilhoseira Semi Automática 10mm</div>
-                                    <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                        </div>
                     </li>
 
                     <!-- Tintas -->
                     <li class="mb-2 category-container">
-                        <a href="#tintas" class="category-link flex justify-between items-center">
+                        <a href="{{ url('/categorias/tintas') }}" class="category-link flex justify-between items-center">
                             Tintas
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <div class="category-products">
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/tinta_sublimatica_kian_1l.jpeg') }}" alt="Tinta Sublimática">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Tinta Sublimática Kian 1L</div>
-                                    <a href="#" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                        </div>
                     </li>
 
                     <!-- Produtos Químicos e de Limpeza -->
                     <li class="mb-2 category-container">
-                        <a href="#produtos-quimicos-limpeza" class="category-link flex justify-between items-center">
+                        <a href="{{ url('/categorias/produtos_quimicos_e_limpeza') }}" class="category-link flex justify-between items-center">
                             Produtos Químicos e de Limpeza
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <div class="category-products">
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}" alt="Primer">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Primer PA02 940ml</div>
-                                    <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/alcool_isopropilico_st_900_ml.jpeg') }}" alt="Álcool Isopropílico">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Álcool Isopropílico ST 900ml</div>
-                                    <a href="{{ url('/produtos/alcool-isopropanol-st-900') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                            <div class="product-preview">
-                                <img src="{{ asset('images/produtos/laca_alt_pro_brilho_1l.jpeg') }}" alt="Laca">
-                                <div class="product-preview-info">
-                                    <div class="product-preview-title">Laca Alt Pro Brilho 1L</div>
-                                    <a href="{{ url('/produtos/laca_alt_pro_brilho_1l') }}" class="product-preview-link">Ver produto →</a>
-                                </div>
-                            </div>
-                        </div>
                     </li>
                 </ul>
             </nav>
@@ -669,12 +607,14 @@
             }
         });
 
+        /*  */
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth' // Smooth scroll animation
             });
         });
+
     </script>
 </body>
 </html>

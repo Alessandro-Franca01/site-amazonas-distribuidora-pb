@@ -247,24 +247,24 @@
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato"
+                        <img src="{{ asset('images/chapas_policarbonato_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">CASO DE USO 1</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO 1</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM"
+                        <img src="{{ asset('images/acm_composto_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">CASO DE USO 2</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO 2</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico"
+                        <img src="{{ asset('images/acrilico_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">CASO DE USO 3</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO 3</h3>
                         </div>
                     </div>
                 </div>
@@ -280,10 +280,10 @@
                 <!-- Linha única (full width) -->
                 <div class="grid grid-cols-1 mb-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 lg:h-96">
-                        <img src="{{ asset('images/chapas_policarbonato.jpg') }}" alt="Chapas de Policarbonato"
+                        <img src="{{ asset('images/chapas_policarbonato_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">CHAPAS DE POLICARBONATO</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO</h3>
                         </div>
                     </div>
                 </div>
@@ -291,17 +291,17 @@
                 <!-- Linha dupla (apenas em desktop) -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acm_composto.jpg') }}" alt="ACM"
+                        <img src="{{ asset('images/acm_composto_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">ACM</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO</h3>
                         </div>
                     </div>
                     <div class="relative group overflow-hidden rounded-xl shadow-lg h-64">
-                        <img src="{{ asset('images/acrilico.jpg') }}" alt="Acrílico"
+                        <img src="{{ asset('images/acrilico_NO_IMG.jpg') }}" alt="SEM IMG"
                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"/>
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6">
-                            <h3 class="text-2xl font-bold text-white">ACRÍLICO</h3>
+                            <h3 class="text-2xl font-bold text-white">TEXTO</h3>
                         </div>
                     </div>
                 </div>
