@@ -9,6 +9,11 @@ Route::get('/', function () {
 
 Route::view('/quem_somos', 'quem_somos');
 Route::view('/contato', 'contato');
+
+Route::get('/error', function () {
+    return view('error');
+})->name('error');
+
 Route::view('/produtos/alcool-isopropanol-st-900', 'produtos.alcool_isopropilico_st_900_ml');
 Route::view('/produtos/acm', 'produtos.acm');
 Route::view('/produtos/fita_forte_adere_dupla_face', 'produtos.fita_forte_adere_dupla_face');
@@ -34,7 +39,7 @@ Route::view('/categorias/produtos_quimicos_e_limpeza', 'categorias.produtos_quim
 
 Route::get('/produtos', function () {
     return view('categorias.index');
-});
+})->name('produtos');
 
 Route::get('/buscar', [ProductSearchController::class, 'search'])->name('product.search');
 Route::get('/api/products', [ProductSearchController::class, 'getProducts'])->name('api.products');

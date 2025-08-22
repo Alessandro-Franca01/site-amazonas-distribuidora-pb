@@ -40,9 +40,9 @@ $products = [
 @endsection
 
 @section('hero')
-    <!-- Hero Section for Products -->
-    <section class="bg-cover bg-center py-20 text-white text-center relative" style="background-image: url('{{ asset('images/produtos/banner_produtos.jpeg') }}')">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+<!-- Hero Section for Products -->
+    <section class="bg-white py-20 text-center relative overflow-hidden">
+        <div class="gradient-overlay-produtos absolute inset-0"></div>
         <div class="container mx-auto px-6 relative z-10">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Produtos Quimicos e Limpeza</h1>
             <p class="text-lg md:text-xl">Explore nossa vasta gama de produtos de alta qualidade.</p>
