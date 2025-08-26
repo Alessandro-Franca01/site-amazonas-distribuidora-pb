@@ -8,7 +8,10 @@ Route::get('/', function () {
 });
 
 Route::view('/quem_somos', 'quem_somos');
-Route::view('/contato', 'contato');
+Route::get('/contato', function () {
+    return view('contato');
+});
+Route::post('/contato', [App\Http\Controllers\ContactController::class, 'sendEmail'])->name('contact.send');
 
 Route::get('/error', function () {
     return view('error');
