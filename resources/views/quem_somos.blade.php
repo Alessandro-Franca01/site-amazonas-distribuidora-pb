@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
+    <link rel="shortcut icon" href="{{url('images/icones/logo.png')}}" >
     <title>Quem Somos - Amazonas Distribuidora PB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -36,7 +36,7 @@
     <div class="sidebar-overlay"></div>
     <div class="sidebar">
         <div class="sidebar-header">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
+            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/icones/logo.png')}}"/>
             <button class="close-sidebar">
                 <span class="material-icons">close</span>
             </button>
@@ -52,7 +52,7 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
+            <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/icones/logo.png')}}"/>
                 <span class="text-2xl font-bold text-green-700">AMZ - Amazonas Distribuidora PB</span>
             </div>
             <nav class="hidden md:flex space-x-6">
