@@ -18,6 +18,7 @@ enum ProdutoEnum: string
     case ADESIVO_PERFURADO = 'Adesivo Perfurado';
     case ADESIVO_BRANCO = 'Adesivo Branco';
     case PVC_EXPANDIDO = 'PVC Expandido';
+    case TINTA_SUBLIMATICA_MARABU = 'Tinta Sublimática Marabu';
 
     public static function getProdutos(): array
     {
@@ -35,7 +36,8 @@ enum ProdutoEnum: string
             self::TINTA_SUBLIMATICA_KIAN->value => '/produtos/tinta_sublimatica_kian_1l',
             self::ADESIVO_PERFURADO->value => '/produtos/adesivo_perfurado',
             self::ADESIVO_BRANCO->value => '/produtos/adesivo_branco',
-            self::PVC_EXPANDIDO->value => '/produtos/pvc_expandido'
+            self::PVC_EXPANDIDO->value => '/produtos/pvc_expandido',
+            self::TINTA_SUBLIMATICA_MARABU->value => '/produtos/tinta_sublimática_marabu',
         ];
     }
 
