@@ -25,6 +25,7 @@ Route::view('/produtos/primer_pa02_940ml', 'produtos.primer_pa02_940ml');
 Route::view('/produtos/laca_alt_pro_brilho_1l', 'produtos.laca_alt_pro_brilho_1l');
 Route::view('/produtos/luz_led_12v', 'produtos.luz_led_12v');
 Route::view('/produtos/ilhoseira_semi_auto_10mm', 'produtos.ilhoseira_semi_auto_10mm');
+Route::view('/produtos/ilho_macho_10mm', 'produtos.ilhos_10mm');
 Route::view('/produtos/ponteira', 'produtos.ponteira');
 Route::view('/produtos/adesivo_branco', 'produtos.adesivo_branco');
 Route::view('/produtos/adesivo_perfurado', 'produtos.adesivo_perfurado');
