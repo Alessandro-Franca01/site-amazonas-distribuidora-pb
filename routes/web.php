@@ -25,13 +25,14 @@ Route::view('/produtos/primer_pa02_940ml', 'produtos.primer_pa02_940ml');
 Route::view('/produtos/laca_alt_pro_brilho_1l', 'produtos.laca_alt_pro_brilho_1l');
 Route::view('/produtos/luz_led_12v', 'produtos.luz_led_12v');
 Route::view('/produtos/ilhoseira_semi_auto_10mm', 'produtos.ilhoseira_semi_auto_10mm');
+Route::view('/produtos/ilho_macho_10mm', 'produtos.ilhos_10mm');
 Route::view('/produtos/ponteira', 'produtos.ponteira');
 Route::view('/produtos/adesivo_branco', 'produtos.adesivo_branco');
 Route::view('/produtos/adesivo_perfurado', 'produtos.adesivo_perfurado');
 Route::view('/produtos/pvc_expandido', 'produtos.pvc_expandido');
 Route::view('/produtos/fita_dupla_face_alta_performance', 'produtos.fita_dupla_face_alta_performance');
 Route::view('/produtos/silicone_neutro_incolor_260g', 'produtos.silicone_neutro_incolor_260g');
-Route::view('/produtos/tinta_sublimática_marabu', 'produtos.tinta_sublimática_marabu');
+Route::view('/produtos/tinta_sublimatica_marabu', 'produtos.tinta_sublimatica_marabu');
 Route::view('/produtos/tinta_mara_jet_cyan_500ml', 'produtos.tinta_mara_jet_cyan_500ml');
 Route::view('/produtos/poxpur_flex_pu_colors_base_poliuretano', 'produtos.poxpur_flex_pu_colors_base_poliuretano');
 

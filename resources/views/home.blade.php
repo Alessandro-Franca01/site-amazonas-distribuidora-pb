@@ -164,11 +164,12 @@
             background-color: #2e7d32;
         }
 
-         .social-icon {
+        .social-icon {
             display: flex;
             align-items: center;
             margin-bottom: 0.5rem;
         }
+
         .social-icon svg, .social-icon .material-icons {
             margin-right: 0.5rem;
             width: 1.5rem;
@@ -567,15 +568,6 @@
                 <div>
                     <h4 class="text-xl font-semibold mb-4">Redes Sociais</h4>
                     <div class="space-y-3">
-                        <div class="social-icon">
-                            <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325v21.351C0 23.407 0.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463 0.099 2.795 0.143v3.24l-1.918 0.001c-1.504 0-1.795 0.715-1.795 1.763v2.313h3.587l-0.467 3.622h-3.12V24h6.116c0.73 0 1.323-0.593 1.323-1.325V1.325C24 0.593 23.407 0 22.675 0z"></path>
-                            </svg>
-                            </a>
-                            <span>Facebook</span>
-                            
-                        </div>
                         <div class="social-icon">
                             <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="https://www.instagram.com/amazonasdistribuidorapb/">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

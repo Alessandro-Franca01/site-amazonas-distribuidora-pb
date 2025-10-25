@@ -1,361 +1,123 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link rel="shortcut icon" href="{{url('images/logo01-removebg.png')}}" >
-    <title> Ilhoseira Semi Automática 10mm - Amazonas Distribuidora PB</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/sidebar.css') }}">
-    <script src="{{ asset('assets/js/sidebar.js') }}"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('image-bg.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .gradient-overlay {
-            background: linear-gradient(to right, rgba(12, 105, 57, 0.9), rgba(0, 0, 0, 0.6));
-        }
-        .gradient-overlay-produto {
-            background: linear-gradient(to right, rgba(0, 82, 165, 0.8), rgba(0, 0, 0, 0.4));
-        }
-        .breadcrumb-item + .breadcrumb-item::before {
-            content: ">";
-            padding: 0 0.5rem;
-            color: #6b7280;
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 80%;
-            max-width: 300px;
-            height: 100vh;
-            background: white;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .sidebar.open {
-            left: 0;
-        }
-        
-        .sidebar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .sidebar-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .sidebar-header {
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .sidebar-nav {
-            padding: 1rem;
-        }
-        
-        .sidebar-nav a {
-            display: block;
-            padding: 0.75rem 0;
-            color: #333;
-            border-bottom: 1px solid #f5f5f5;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        
-        .sidebar-nav a:hover {
-            color: #2e7d32; /* Verde similar ao seu tema */
-            padding-left: 0.5rem;
-        }
-        
-        .close-sidebar {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body class="bg-gray-100">
-    <!-- Side bar -->
-    <div class="sidebar-overlay"></div>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <img alt="Logo Amazonas Distribuidora PB" class="h-10" src="{{url('images/logo01-removebg.png')}}"/>
-            <button class="close-sidebar">
-                <span class="material-icons">close</span>
-            </button>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="/">Início</a>
-            <a href="/quem_somos">Quem Somos</a>
-            <a href="/produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </div>
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img alt="Logo Amazonas Distribuidora PB" class="h-12 mr-3" src="{{url('images/logo01-removebg.png')}}"/>
-                <span class="text-2xl font-bold text-green-700"> AMZ - Amazonas Distribuidora PB</span>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/">Início</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/quem_somos">Quem Somos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/produtos">Produtos</a>
-                <a class="text-gray-700 hover:text-green-600 transition duration-300" href="/contato">Contato</a>
-            </nav>
-            <button class="md:hidden text-green focus:outline-none open-sidebar">
-                <span class="material-icons">menu</span>
-            </button>
-        </div>
-    </header>
+@extends('produtos.layout')
 
-    <!-- Breadcrumbs -->
+@section('breadcrumbs')
     <div class="bg-gray-200 py-2">
         <div class="container mx-auto px-6">
             <div class="flex items-center text-sm">
                 <span class="breadcrumb-item"><a href="/" class="text-blue-600 hover:text-blue-800">Início</a></span>
-                <span class="breadcrumb-item"><a href="/#produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
+                <span class="breadcrumb-item"><a href="/produtos" class="text-blue-600 hover:text-blue-800">Produtos</a></span>
                 <span class="breadcrumb-item text-gray-600">Ilhoseira Semi Automática 10mm</span>
             </div>
         </div>
     </div>
+@endsection
 
-    <main>
-        <!-- Seção Principal do Produto -->
-        <section class="py-8 md:py-12 bg-white relative">
-            <div class="gradient-overlay-produto absolute inset-0 opacity-10"></div>
-            <div class="container mx-auto px-4 sm:px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row gap-6 md:gap-12">
-                    <!-- Imagem do Produto -->
-                    <div class="w-full lg:w-1/2">
-                        <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-                            <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}" 
-                                alt="ACM - Chapa de aluminio composto" 
-                                class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
-                        </div>
-                        <div class="mt-4 grid grid-cols-3 gap-2">
-                            <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm_02.jpeg') }}" 
-                                alt="IMG 02" 
-                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
-                            <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm_03.jpeg') }}" 
-                                alt="IMG 03"
-                                class="w-full h-20 md:h-24 object-cover rounded-lg shadow cursor-pointer thumbnail-image">
-                        </div>
+@section('principal')
+    <section class="py-8 md:py-12 bg-white relative">
+        <div class="gradient-overlay-produto absolute inset-0 opacity-10"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-6 md:gap-12">
+                <!-- Imagem do Produto -->
+                 <div class="w-full lg:w-1/2">
+                    <div class="bg-white p-2 md:p-4 rounded-lg shadow-lg">
+                        <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}" alt="Ilhoseira Semi Automática 10mm" 
+                            class="w-full h-auto max-h-[400px] object-contain rounded-lg cursor-pointer" id="mainProductImage">
                     </div>
-                    
-                    <!-- Informações do Produto -->
-                    <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-3 md:mb-4">Ilhoseira Aplicadora De Ilhós Semi Automática Com Rodinhas - Westman</h1>
-                        
-                        <div class="bg-gray-100 p-4 md:p-6 rounded-lg mb-4 md:mb-6">
-                            <p class="text-base md:text-lg text-gray-700 mb-3 md:mb-4">
-                                A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.
-                                 Com estrutura robusta e rodinhas integradas, é ideal para ateliês, estofarias, tapeçarias e ambientes de produção que exigem mobilidade e alto desempenho.
-                                Aplicação precisa, mobilidade facilitada e durabilidade para uso contínuo.
-                            </p>
-                        </div>
-                        
-                        <div class="mb-4 md:mb-6">
-                            <h2 class="text-lg md:text-xl font-semibold text-blue-700 mb-2">Benefícios:</h2>
-                            <ul class="list-disc pl-5 text-gray-700 space-y-1 text-sm md:text-base">
-                                <li><strong> Alta eficiência </strong> Aplica ilhós de 10mm de forma rápida e com excelente acabamento, otimizando o tempo de produção.</li>
-                                <li><strong> Fácil transporte </strong> Rodas inferiores que facilitam o deslocamento e o uso em diferentes áreas de trabalho.</li>
-                                <li><strong> Versatilidade </strong> Compatível com diversos materiais como couro, lona (canvas), oxford e outros tecidos resistentes.</li>
-                                <li><strong> Durabilidade profissional </strong> Estrutura reforçada e componentes de alta qualidade, desenvolvidos para uso intenso.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row items-center gap-3">
-                            <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre a Ilhoseira Aplicadora De Ilhós Semi Automática Com Rodinhas - Westman." 
-                            class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
-                                <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
-                                Solicitar Orçamento
-                            </a>
-                            <a href="/contato" 
-                            class="w-full sm:w-auto border border-blue-600 text-blue-600 py-2 md:py-3 px-4 md:px-6 rounded-lg hover:bg-blue-50 transition duration-300 text-sm md:text-base text-center">
-                                Mais Informações
-                            </a>
-                        </div>
+                    <div class="mt-4 grid grid-cols-4 gap-2">
+                        <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm_02.jpeg') }}" alt="Ilhoseira Semi Automática 10mm - Imagem 2"
+                            class="w-full h-20 object-cover rounded cursor-pointer thumbnail-image">
+                        <img src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm_03.jpeg') }}" alt="Ilhoseira Semi Automática 10mm - Imagem 3"
+                            class="w-full h-20 object-cover rounded cursor-pointer thumbnail-image">
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Especificações Técnicas -->
-        <section class="py-12 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Especificações Técnicas</h2>
-                
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6 border-b md:border-b-0 md:border-r border-gray-200">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-4">Informações Gerais</h3>
-                            <table class="w-full">
-                                <tbody>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Marca</td>
-                                        <td class="py-3 text-gray-800">Westman</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Modelo</td>
-                                        <td class="py-3 text-gray-800"> W-114 HP-12</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Cor</td>
-                                        <td class="py-3 text-gray-800">Cinza</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Diâmetro do ilhós</td>
-                                        <td class="py-3 text-gray-800">10 mm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 text-gray-600 font-medium">Dimensões</td>
-                                        <td class="py-3 text-gray-800">A 57 x L 32 x C 25 cm</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-4">Outros</h3>
-                            <table class="w-full">
-                                <tbody>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Compatibilidade de materiais</td>
-                                        <td class="py-3 text-gray-800">Couro, lona, oxford, brim, tecidos sintéticos</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Peso líquido</td>
-                                        <td class="py-3 text-gray-800">6,3 kg</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Garantia</td>
-                                        <td class="py-3 text-gray-800">90 dias após o recebimento</td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100">
-                                        <td class="py-3 text-gray-600 font-medium">Conteúdo da embalagem</td>
-                                        <td class="py-3 text-gray-800"> 1 Ilhoseira Aplicadora de Ilhós Semi-Automática com Rodinhas 10mm</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Produtos Relacionados -->
-        <section class="py-12 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos em Destaques</h2>
-                
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
-                            <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
-                            <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="ACM - Aluminio Composto" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/acms/acm.jpeg') }}"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">ACM - Aluminio Composto</h3>
-                            <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
-                            <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Fita Dupla Face - Alta Performace</h3>
-                            <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
-                            <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseira Semi Automática 10mm</h3>
-                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
-                            <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-green-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h4 class="text-xl font-semibold mb-4">Amazonas Distribuidora PB</h4>
-                    <p class="text-gray-300">Soluções inovadoras em comunicação visual para sua empresa se destacar.</p>
-                    <div class="mt-4 flex space-x-4">
-                        <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#"><span class="material-icons">facebook</span></a>
-                        <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="https://www.instagram.com/amazonasdistribuidorapb/" target="_blank">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                <!-- Informações do Produto -->
+                <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
+                    <h1 class="text-4xl font-bold text-blue-800 mb-4">Ilhoseira Semi Automática 10mm</h1>
+                    <p class="text-lg text-gray-700 mb-6">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
+                    <div class="text-2xl font-semibold text-green-600 mb-6">R$ 1.200,00</div>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/5583988022821?text=Olá! Tenho interesse na Ilhoseira Semi Automática 10mm." target="_blank" class="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 text-lg font-semibold">
+                            Comprar via WhatsApp
                         </a>
-                        <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#"><span class="material-icons">phone</span></a>
+                        <a href="/contato" class="border border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-50 transition duration-300 text-lg font-semibold">
+                            Mais Informações
+                        </a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-xl font-semibold mb-4">Links Rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/">Início</a></li>
-                        <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/quem_somos">Sobre Nós</a></li>
-                        <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/#produtos">Produtos</a></li>
-                        <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold mb-4">Localização</h4>
-                    <p class="text-gray-300 mb-2">Av Feliciano Dourado, 689 - Torre</p>
-                    <p class="text-gray-300 mb-2">João Pessoa - PB, CEP 58040-260</p>
-                    <p class="text-gray-300"><strong>Horário:</strong> Seg à Sex, 08h - 17h</p>
-                </div>
-            </div>
-            <div class="border-t border-green-700 pt-8 text-center">
-                <p class="text-gray-400">© <span id="currentYear"></span> Amazonas Distribuidora PB. Todos os direitos reservados.</p>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Especificações Técnicas</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-6 border-b md:border-b-0 md:border-r border-gray-200">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Informações Gerais</h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Marca</td>
+                                    <td class="py-3 text-gray-800">Westman</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Modelo</td>
+                                    <td class="py-3 text-gray-800"> W-114 HP-12</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Cor</td>
+                                    <td class="py-3 text-gray-800">Cinza</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Diâmetro do ilhós</td>
+                                    <td class="py-3 text-gray-800">10 mm</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 text-gray-600 font-medium">Dimensões</td>
+                                    <td class="py-3 text-gray-800">A 57 x L 32 x C 25 cm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Outros</h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Compatibilidade de materiais</td>
+                                    <td class="py-3 text-gray-800">Couro, lona, oxford, brim, tecidos sintéticos</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Peso líquido</td>
+                                    <td class="py-3 text-gray-800">6,3 kg</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Garantia</td>
+                                    <td class="py-3 text-gray-800">90 dias após o recebimento</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3 text-gray-600 font-medium">Conteúdo da embalagem</td>
+                                    <td class="py-3 text-gray-800"> 1 Ilhoseira Aplicadora de Ilhós Semi-Automática com Rodinhas 10mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
+
+@section('footer')
+    @include('components.footer')
+@endsection
+
+@section('scripts')
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
+
         // Galeria de imagens do produto
         const mainImage = document.getElementById('mainProductImage');
         const thumbnails = document.querySelectorAll('.thumbnail-image');
@@ -406,5 +168,4 @@
             });
         }
     </script>
-</body>
-</html>
+@endsection

@@ -507,7 +507,7 @@
                         <div class="p-4">
                             <h3 class="font-semibold text-lg mb-2">Tinta Sublimática Texa®Jet DX-SCF | Marabu</h3>
                             <p class="text-gray-600 text-sm">A Texa®Jet DX-SCF é uma tinta sublimática à base de água desenvolvida especialmente para impressoras com cabeçotes Epson® micro piezoelétricos.</p>
-                            <a href="{{ url('/produtos/tinta_sublimática_marabu') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
+                            <a href="{{ url('/produtos/tinta_sublimatica_marabu') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver Detalhes</a>
                         </div>
                     </div>
                     <!-- Product Card 1 -->

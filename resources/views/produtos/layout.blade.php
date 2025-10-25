@@ -32,6 +32,16 @@
             padding: 0 0.5rem;
             color: #6b7280;
         }
+        .social-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .social-icon svg, .social-icon .material-icons {
+            margin-right: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -72,94 +82,61 @@
 
     @yield('breadcrumbs')
 
-<main>
-    @yield('principal')
+    <main>
+        @yield('principal')
 
-    @yield('caracteristicas')
+        @yield('caracteristicas')
 
-    @yield('aplicacao-dicas')
+        @yield('aplicacao-dicas')
 
-    <!-- Produtos Relacionados -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos em Destaques</h2>
+        <!-- Produtos Relacionados -->
+        <section class="py-12 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">Produtos em Destaques</h2>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}"/>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
-                        <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
-                        <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Primer" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/primer_pa02_940ml.jpeg') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Primer</h3>
+                            <p class="text-gray-600 text-sm">Soluções impactantes para destacar a identidade visual da sua empresa.</p>
+                            <a href="{{ url('/produtos/primer_pa02_940ml') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="ACM - Aluminio Composto" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/acms/acm.jpeg') }}"/>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">ACM - Aluminio Composto</h3>
-                        <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
-                        <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="ACM - Aluminio Composto" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/acms/acm.jpeg') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">ACM - Aluminio Composto</h3>
+                            <p class="text-gray-600 text-sm">O ACM (Alumínio Composto) Amazonas é um material de construção versátil, utilizado em fachadas, revestimentos e peças decorativas.</p>
+                            <a href="{{ url('/produtos/acm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}"/>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Fita Dupla Face - Alta Performace</h3>
-                        <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
-                        <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Adesivos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/fitas/fita_dupla_face_alta_performace.jpeg') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Fita Dupla Face - Alta Performace</h3>
+                            <p class="text-gray-600 text-sm">A fita Adere Fita Forte é a solução ideal para uma ampla gama de aplicações, tanto em ambientes internos quanto externos.</p>
+                            <a href="{{ url('/produtos/fita_forte_adere_dupla_face') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}"/>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseira Semi Automática 10mm</h3>
-                        <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
-                        <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img alt="Ilhoseira" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="{{ asset('images/produtos/ilhoseira_semi_auto_10mm.jpeg') }}"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Ilhoseira Semi Automática 10mm</h3>
+                            <p class="text-gray-600 text-sm">A Ilhoseira Semi-Automática da Westman foi desenvolvida para profissionais que buscam rapidez, precisão e praticidade na aplicação de ilhós em diferentes materiais.</p>
+                            <a href="{{ url('/produtos/ilhoseira_semi_auto_10mm') }}" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Ver detalhes →</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-<footer class="bg-green-800 text-white py-12">
-    <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Amazonas Distribuidora PB</h4>
-                <p class="text-gray-300">Soluções inovadoras em comunicação visual para sua empresa se destacar.</p>
-                <div class="mt-4 flex space-x-4">
-                    <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#"><span class="material-icons">facebook</span></a>
-                    <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="https://www.instagram.com/amazonasdistribuidorapb/" target="_blank">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-                    </a>
-                    <a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="#"><span class="material-icons">phone</span></a>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Links Rápidos</h4>
-                <ul class="space-y-2">
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/">Início</a></li>
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/quem_somos">Sobre Nós</a></li>
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/#produtos">Produtos</a></li>
-                    <li><a class="text-gray-300 hover:text-yellow-400 transition duration-300" href="/contato">Contato</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Localização</h4>
-                <p class="text-gray-300 mb-2">Av Feliciano Dourado, 689 - Torre</p>
-                <p class="text-gray-300 mb-2">João Pessoa - PB, CEP 58040-260</p>
-                <p class="text-gray-300"><strong>Horário:</strong> Seg à Sex, 08h - 17h</p>
-            </div>
-        </div>
-        <div class="border-t border-green-700 pt-8 text-center">
-            <p class="text-gray-400">© <span id="currentYear"></span> Amazonas Distribuidora PB. Todos os direitos reservados.</p>
-        </div>
-    </div>
-</footer>
+@yield('footer')
+
 <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
