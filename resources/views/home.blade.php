@@ -526,7 +526,7 @@
                     <p class="text-gray-600">Fique por dentro das novidades e promoções.</p>
                 </div>
                 <div class="promo-item text-center md:w-1/2 px-4">
-                    <a href="https://api.whatsapp.com/send?phone=83998530445" target="_blank" class="block">
+                    <a href="https://api.whatsapp.com/send?phone=83993615903" target="_blank" class="block">
                         <img src="{{ asset('images/atendimento_whatssap.jpeg') }}"
                             alt="WhatsApp Amazonas Distribuidora PB"
                             class="promo-img rounded-lg shadow-lg w-full h-80 object-cover hover:shadow-xl transition-shadow duration-300"/>
@@ -538,7 +538,7 @@
     </section>
 
     <!-- Botão do whatssap -->
-    <a href="https://api.whatsapp.com/send?phone=83998530445"
+    <a href="https://api.whatsapp.com/send?phone=83993615903"
         target="_blank"
         class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:shadow-xl animate-bounce"
         style="animation-iteration-count: 3;">
