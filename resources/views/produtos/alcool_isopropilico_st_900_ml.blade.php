@@ -49,7 +49,7 @@
                     </div>
                     
                     <div class="flex flex-col sm:flex-row items-center gap-3">
-                        <a href="https://api.whatsapp.com/send?phone=83998530445&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
+                        <a href="https://api.whatsapp.com/send?phone=83993615903&text=Olá! Gostaria de informações sobre o Álcool Isopropílico ST 900" 
                         class="w-full sm:w-auto bg-green-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg flex items-center justify-center hover:bg-green-700 transition duration-300 text-sm md:text-base">
                             <span class="material-icons mr-2 text-sm md:text-base">shopping_cart</span> 
                             Solicitar Orçamento
